@@ -13,14 +13,20 @@ Bookworm is a user-friendly web application designed to act as a central hub for
 
 ## Usage
 - Run the command below to clone the project into your local machine
-`` git clone https://github.com/learnable-2023/BOOKS-FE-4.git 
-``
+``` 
+git clone https://github.com/learnable-2023/BOOKS-FE-4.git 
+
+```
 
 - In the project directory run the comman below to install none_modules.
-`` npm install
-``
-`` npm start
-``
+``` 
+npm install
+
+```
+``` 
+npm start
+
+```
 
 ## Tools Used 
 - HTML5
