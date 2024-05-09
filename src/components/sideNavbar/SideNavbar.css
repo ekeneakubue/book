@@ -16,7 +16,7 @@ a{
 }
 .sideNavbar{
     background-color: var(--sideBarBackgroundColor);
-    width: 15%;
+    width: 18%;
     height: 100vh;
     padding: 2.5rem 2rem;
     font-family: "Poppins", sans-serif;    
