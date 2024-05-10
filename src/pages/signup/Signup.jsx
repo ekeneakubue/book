@@ -1,6 +1,22 @@
 import React from 'react'
 import './Signup.css'
 import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
+
+const Signup = () => {
+    const [user, setUser] = useState("");
+    const [email, setEmail] = useState("");    
+    const [pass, setPass] = useState("");
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log({user, email, pass });        
+        setUser("");
+        setEmail("");
+        setPass("");
+    };
+    const gotoLoginPage = () => navigate("/login");
 
 export default function Signup() {
   return (
@@ -12,7 +28,7 @@ export default function Signup() {
                     BookWorm
                 </div>
             </Link>
-            <form action="">
+            <form action="" onSubmit={handleSubmit}>
                 <div className="signup-form-title">
                     Create an account
                 </div>
@@ -34,13 +50,34 @@ export default function Signup() {
                 </div>
                 <div className="signup-user-detail-field">
                     <div className="signup-email-box">
-                        <input type="text" placeholder='Full name'/>
+                        <input 
+                            type="text" 
+                            placeholder='Full name'
+                            name='user'
+                            id='user'
+                            required
+                            onChange={(e) => setUser(e.target.value)}
+                        />
                     </div> 
                     <div className="signup-email-box">
-                        <input type="email" placeholder='Email'/>
+                        <input 
+                            type="email" 
+                            placeholder='Email'
+                            name='email'
+                            id='email'
+                            required
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
                     </div>  
                     <div className="signup-email-box">
-                        <input type="password" placeholder='Password'/>
+                        <input 
+                            type="password" 
+                            placeholder='Password'
+                            name='pass'
+                            id='pass'
+                            required
+                            onChange={(e) => setPass(e.target.value)}
+                        />
                     </div>     
                     <div className="signup-email-box">
                         <input type="password" placeholder='Confirm password'/>
@@ -49,11 +86,11 @@ export default function Signup() {
                 <div className="pwd-details">
                     <div className="left-detail">Remember me</div>
                 </div>  
-                <div className="signup-button">Sign up</div>  
+                <div className="signup-button" onClick={Signup}>Sign up</div>  
                 <div className="dont-have-account">
                     <span>Already have an account? </span>
-                    <span>
-                        <Link to = '../login'>Login</Link>
+                    <span onClick={gotoLoginPage}>
+                        Login
                     </span>    
                 </div>      
             </form>
