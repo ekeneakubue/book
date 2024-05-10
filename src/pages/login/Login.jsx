@@ -6,10 +6,12 @@ export default function Login() {
   return (
     <div className='login-page'>
         <div className="login-left">
-            <div className="login-brand">
-                <img src="images/logo.jpg" alt="" />
-                BookWorm
-            </div>
+            <Link to='/'>
+                <div className="login-brand">
+                    <img src="images/logo.jpg" alt="" />
+                    BookWorm
+                </div>
+            </Link>
             <form action="">
                 <div className="login-form-title">
                     Login to Your Account
@@ -46,7 +48,7 @@ export default function Login() {
                 <div className="dont-have-account">
                     <span>Don't have an account? </span>
                     <span>
-                        <Link to = 'signup'>Create one</Link>
+                        <Link to = '../signup'>Create one</Link>
                     </span>    
                 </div>      
             </form>
