@@ -1,10 +1,14 @@
 import React from 'react'
 import './Explore.css'
+import SideNavbar from '../../components/sideNavbar/SideNavbar'
 
 export default function Explore() {
   return (
-    <main>
-        <h1>EXPLORE</h1>
-    </main>
+    <>
+      <SideNavbar />
+      <main>
+        <h1>Explore</h1>
+      </main>
+    </>
   )
 }
