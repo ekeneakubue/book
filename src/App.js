@@ -6,22 +6,26 @@ import Explore from './pages/explore/Explore';
 import MyNotes from './pages/myNotes/MyNotes';
 import SearchResult from './pages/searchResult/SearchResult';
 import Settings from './pages/settings/Settings';
-import SideNavbar from './components/sideNavbar/SideNavbar';
 import About from './pages/about/About';
+import Home from './pages/home/Home';
+import Signup from './pages/signup/Signup';
+import Login from './pages/login/Login';
 
 function App() {
   return (
     <BrowserRouter>
       <div className='bookworm-main'>
-      <SideNavbar />
       <Routes>
-        <Route path = '/' element = {<Dashboard />} />
+        <Route path = '/' element = {<Home />} />
+        <Route path = '/dashboard' element = {<Dashboard />} />
         <Route path = '/bookshelf' element = {<BookShelf />} />
         <Route path = '/explore' element = {<Explore />} />
         <Route path = '/about' element = {<About />} />
         <Route path = '/mynotes' element = {<MyNotes />} />
         <Route path = '/searchresult' element = {<SearchResult />} />
         <Route path = '/settings' element = {<Settings />} />
+        <Route path = '/signup' element = {<Signup />} />
+        <Route path = '/login' element = {<Login />} />
       </Routes>
       </div>
     </BrowserRouter>
