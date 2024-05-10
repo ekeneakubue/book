@@ -1,0 +1,100 @@
+:root{
+    --BackgroundColor: #192E32;
+    --BooksStat: #192426;
+    --HeroBgColor: #27373A;
+    --textColor: #e9e6e6;
+    --sideNavsColor: #A0C6D0;
+    --sideBarBackgroundColor: #243F46;
+    --sideBarIcons: #54838F;
+    --btn-hover-yellow: #FFC25E;
+    --icon-hover-color: #8C5F16;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+header .homeNavbar-l{
+    width: 40%;
+}
+.homeNavbar-l .home-brand{
+    display: flex;
+    gap: 1rem;
+    font-size: 20px;
+    align-items: center;
+}
+header .homeNavbar-r{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.homeNavbar-r .navs{
+    width: 70%;
+    padding: 0.5rem;
+    font-size: 18px;
+    display: flex;
+    gap: 2rem;
+}
+
+.homeNavbar-r .buttons{
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    width: 30%;
+}
+.buttons a{
+    width: 50%;
+}
+.signup-btn{
+    background-color: var(--btn-hover-yellow);
+    padding: 0.6rem 0rem;
+    border: 1px solid var(--btn-hover-yellow);
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.login-btn{
+    background-color: transparent;
+    padding: 0.6rem 0rem;
+    border: 1px solid var(--sideNavsColor);
+    color: var(--textColor);
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.hero-section{
+    width: 100%;
+    background-color: var(--HeroBgColor);
+    display: flex;
+    align-items: center;
+    padding: 0rem 4rem;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.hero-left .title{  
+    width: 70%;  
+    font-size: 60px;
+}
+.hero-left p{
+    font-size: 18px;
+}
+.getStarted-btn{
+    background-color: var(--btn-hover-yellow);
+    padding: 0.6rem 0rem;
+    border: 1px solid var(--btn-hover-yellow);
+    border-radius: 5px;
+    width: 25%;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 1rem;
+}
