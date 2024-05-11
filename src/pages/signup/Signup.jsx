@@ -1,22 +1,6 @@
 import React from 'react'
 import './Signup.css'
 import { Link } from 'react-router-dom'
-import { useNavigate } from "react-router-dom";
-
-const Signup = () => {
-    const [user, setUser] = useState("");
-    const [email, setEmail] = useState("");    
-    const [pass, setPass] = useState("");
-    const navigate = useNavigate();
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log({user, email, pass });        
-        setUser("");
-        setEmail("");
-        setPass("");
-    };
-    const gotoLoginPage = () => navigate("/login");
 
 export default function Signup() {
   return (
@@ -56,7 +40,6 @@ export default function Signup() {
                             name='user'
                             id='user'
                             required
-                            onChange={(e) => setUser(e.target.value)}
                         />
                     </div> 
                     <div className="signup-email-box">
@@ -66,7 +49,6 @@ export default function Signup() {
                             name='email'
                             id='email'
                             required
-                            onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>  
                     <div className="signup-email-box">
@@ -76,7 +58,6 @@ export default function Signup() {
                             name='pass'
                             id='pass'
                             required
-                            onChange={(e) => setPass(e.target.value)}
                         />
                     </div>     
                     <div className="signup-email-box">
@@ -89,7 +70,7 @@ export default function Signup() {
                 <div className="signup-button" onClick={Signup}>Sign up</div>  
                 <div className="dont-have-account">
                     <span>Already have an account? </span>
-                    <span onClick={gotoLoginPage}>
+                    <span>
                         Login
                     </span>    
                 </div>      

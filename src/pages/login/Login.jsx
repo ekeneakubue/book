@@ -1,11 +1,11 @@
 import React from 'react'
-import './Login.css'
+import styles from './Login.module.css'
 import { Link } from 'react-router-dom'
 
 export default function Login() {
   return (
-    <div className='login-page'>
-        <div className="login-left">
+    <div className={styles.login-page}>
+        <div className={styles.login-left}>
             <Link to='/'>
                 <div className="login-brand">
                     <img src="images/logo.jpg" alt="" />
@@ -33,7 +33,7 @@ export default function Login() {
                     <hr />or<hr />    
                 </div>
                 <div className="user-detail-field">
-                    <div className="email-box">
+                    <div className="email-box">                        
                         <input type="email" placeholder='Email'/>
                     </div>  
                     <div className="email-box">
