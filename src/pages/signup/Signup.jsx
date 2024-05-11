@@ -34,13 +34,31 @@ export default function Signup() {
                 </div>
                 <div className="signup-user-detail-field">
                     <div className="signup-email-box">
-                        <input type="text" placeholder='Full name'/>
+                        <input 
+                            type="text" 
+                            placeholder='Full name'
+                            name='user'
+                            id='user'
+                            required
+                        />
                     </div> 
                     <div className="signup-email-box">
-                        <input type="email" placeholder='Email'/>
+                        <input 
+                            type="email" 
+                            placeholder='Email'
+                            name='email'
+                            id='email'
+                            required
+                        />
                     </div>  
                     <div className="signup-email-box">
-                        <input type="password" placeholder='Password'/>
+                        <input 
+                            type="password" 
+                            placeholder='Password'
+                            name='pass'
+                            id='pass'
+                            required
+                        />
                     </div>     
                     <div className="signup-email-box">
                         <input type="password" placeholder='Confirm password'/>
@@ -49,11 +67,11 @@ export default function Signup() {
                 <div className="pwd-details">
                     <div className="left-detail">Remember me</div>
                 </div>  
-                <div className="signup-button">Sign up</div>  
+                <div className="signup-button" onClick={Signup}>Sign up</div>  
                 <div className="dont-have-account">
                     <span>Already have an account? </span>
                     <span>
-                        <Link to = '../login'>Login</Link>
+                        Login
                     </span>    
                 </div>      
             </form>
