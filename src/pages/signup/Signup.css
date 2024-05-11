@@ -8,180 +8,215 @@
     --sideBarIcons: #54838F;
     --btn-hover-yellow: #FFC25E;
     --icon-hover-color: #8C5F16;
+    --input-outline-color:#97AAAD;
+    --error-message-color:#ff0000;
 }
-.signup-page{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    min-height: 100vh;
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+
+.signup--container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+   
+
+}
+.logo{
+    display:flex ;
+    align-items: center;
+    margin-top:20px;
+    
+}
+
+.logo > img{
+    width:40px;
+    margin-left:30px;
+    
+}
+
+.logo--text{
+    font-family: "Poppins", sans-serif; 
+    color: var(--textColor);
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 21.15px;
+    margin-left: 10px;
+   
+}
+
+.left--page{
     font-family: "Inter", sans-serif;
+    background-color: var(--BackgroundColor);
+    text-align: left;
+    width:50vw;
+    padding-left: 30px;
+   
+   
+
+   
 }
-.signup-left{
-    padding: 1rem 2rem 2rem 8rem;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
+
+.account{
+   margin-top: 40px;
+   margin-left: 30px;
 }
-.signup-left .signup-brand{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+
+.account > h2 {
+    margin-bottom: 10px;
+    font-size:2.5rem;
+    font-weight: 500px;
+    line-height: 48px;
 }
-.signup-left form{
-    position: absolute;
-    top: 7rem;
-    width: 35%;
+
+.account > p{
+    font-size: 0.8rem;
+    font-weight: 400px;
+    margin-bottom: 20px;
 }
-.signup-form-title{
-    font-size: 30px;
-    font-weight: 800;
-}
-form p{
-    font-size: 12px;
-}
-.signup-social-btn{
-    display: flex;
-    gap: 1rem;
-    margin: 0.7rem 0rem;
-}
-.signup-social-btn .google-btn{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    justify-content: center;
-    width: 50%;
-    padding: 0.5rem 0rem;
+
+
+.social--btn{
+    color: var(--White);
+    width:80%;
+    background: transparent;
+    margin-left:3px;
+    padding:0.5rem 1.2rem 0.5rem 0.6rem ;
+    border: 1px solid var(--input-outline-color);
     border-radius: 5px;
-    color: var(--textColor);
-    border: 1px solid var(--sideNavsColor);
-    background-color: transparent;
+    outline:none;
+    
 }
-.signup-social-btn .twitter-btn{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    justify-content: center;
-    width: 50%;
-    padding: 0.5rem 0rem;
-    border-radius: 5px;
-    color: var(--textColor);
-    border: 1px solid var(--sideNavsColor);
-    background-color: transparent;
-}
-.or{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-.or hr{
-    width: 50%;
-    border: 0.5px solid var(--sideNavsColor);
-    height: 0vh;
-}
-.signup-email-box{
-    background-color: transparent;
-    width: 100%;
-    padding: 0.3rem 1rem;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 10px;
-    border: 1px solid var(--sideNavsColor);
-}
-.signup-user-detail-field{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.signup-email-box input{
-    background-color: transparent;
-    border: 0px solid;
-    height: 20px;
-    width: 160px;
-    width: 100%;  
-    color: var(--textColor);  
-    padding: 1rem;
-}
-.signup-email-box.icon{
-    font-size: 30px;
+
+.social--btn:hover{
     cursor: pointer;
 }
-input:focus{
-    outline: none;
-}
-::placeholder{
-    font-size: 14px;
-    color: var(--sideNavsColor);
-}
 
-.pwd-details{
-    margin: 2rem 0rem;
+.google--icon{
+
+    margin-right:10px;
+    margin-top:2px;
+
+}
+  
+
+.line{
     display: flex;
-    justify-content: space-between;
-}
-.left-detail{
-    color: var(--textColor);
-}
-.right-detail{
-    color: var(--btn-hover-yellow);
-}
-.signup-button{
-    background-color: var(--btn-hover-yellow);
-    color: var(--BooksStat);
-    padding: 1rem;
-    display: flex;
-    font-weight: 400;
-    justify-content: center;
-    border-radius: 5px;
-    margin-bottom: 1.5rem;
-}
-.dont-have-account{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 20px;
-}
-.dont-have-account span a{
-    color: var(--btn-hover-yellow);
-}
-
-
-
-
-.login-right{
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 50%;
-    gap: 2rem;
+    margin-top: 10px;
+}
+.line p{
+    color:var(--input-outline-color)
+}
+hr{
+    width:37%;
+    height: 0%;
+    margin-left: 5px;
+    margin-right: 6px;
+    border: 1px solid var(--input-outline-color);
+    
+}
+
+.input--container{
+    position: relative;
+}
+
+.input--box{
+    width:80%;
+    padding:10px;
+    padding-left: 30px;
+    border:1px solid var(--input-outline-color);
+    border-radius: 5px;
+    margin-top: 15px;
+    background: transparent;
+    color:var(--input-outline-color)
+
+    
+}
+
+.input--icon {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    left: 10px; 
+    color: var(--input-outline-color);
+  }
+
+  .input:focus{
+    border:5px solid var(--input-outline-color);
+  }
+
+  .eye--icon {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    right: 23%; 
+    cursor: pointer;
+    color: var(--input-outline-color);
+  }
+
+
+
+.remember{
+    margin-top:10px;
+}
+
+.checkbox{
+    margin:1rem 0.6rem;
+}
+
+
+.signup{
+    background-color: var(--btn-hover-yellow);
+    width: 80%;
+    border:none;
+    border-radius: 5px;
+    padding:10px;
+    margin-top: 20px;
+}
+
+.signup:hover{
+    padding:11px;
+    border:1px solid var(--sideBarBackgroundColor);
+    cursor: pointer;
+}
+
+form .bottom--text{
+    margin-top: 10px;
+    margin-left:9rem;
+}
+
+.login{
+    color:var(--btn-hover-yellow);
+}
+
+.right--page{
+    font-family: "Inter", sans-serif;
     background-color: var(--sideBarBackgroundColor);
+    text-align: center;
+    width:50vw;
+    height: 100%;
+
+
 }
-.login-right .title{
-    font-size: 20px;
-    color: var(--textColor);
+
+.right--page > img{
+    margin: 100px 0px 20px 0px;
 }
-.login-right p{
-    font-size: 14px;
-    font-weight: 100;
+
+
+.open{
     color: var(--btn-hover-yellow);
 }
-.page-circ{
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-}
-.circ{
-    width: 8px;
-    padding: 0.2rem;
-    min-height: 1vh;
-    border-radius: 50%;
-    border: 1px solid var(--sideNavsColor);
-}
-.circ.active{
-    background-color: var(--textColor);
+
+.error{
+    font-size: 0.8rem;
+    color:var(--error-message-color);
+    
 }
