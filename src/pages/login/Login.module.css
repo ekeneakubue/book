@@ -9,44 +9,44 @@
     --btn-hover-yellow: #FFC25E;
     --icon-hover-color: #8C5F16;
 }
-.login-page{
+.login_page{
     width: 100%;
     display: flex;
     justify-content: space-between;
     min-height: 100vh;
     font-family: "Inter", sans-serif;
 }
-.login-left{
+.login_left{
     padding: 2rem 1rem 2rem 8rem;
     width: 50%;
     display: flex;
     flex-direction: column;
     background-color: transparent;
 }
-.login-left .login-brand{
+.login_left .login_brand{
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
-.login-left form{
+.login_left form{
     position: absolute;
     top: 10rem;
     width: 35%;
 }
 
-.login-form-title{
+.login_form_title{
     font-size: 40px;
     font-weight: 800;
 }
 form p{
     font-size: 14px;
 }
-.social-btn{
+.social_btn{
     display: flex;
     gap: 1rem;
     margin: 1rem 0rem;
 }
-.google-btn{
+.google_btn{
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -58,7 +58,7 @@ form p{
     border: 1px solid var(--sideNavsColor);
     background-color: transparent;
 }
-.twitter-btn{
+.twitter_btn{
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -81,7 +81,7 @@ form p{
     border: 0.5px solid var(--sideNavsColor);
     height: 0vh;
 }
-.email-box{
+.email_box{
     background-color: transparent;
     width: 100%;
     padding: 0.6rem 1rem;
@@ -92,12 +92,12 @@ form p{
     border-radius: 10px;
     border: 1px solid var(--sideNavsColor);
 }
-.user-detail-field{
+.user_detail_field{
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
-.email-box input{
+.email_box input{
     background-color: transparent;
     border: 0px solid;
     height: 20px;
@@ -106,7 +106,7 @@ form p{
     color: var(--textColor);  
     padding: 1rem;
 }
-.email-box.icon{
+.email_box.icon{
     font-size: 30px;
     cursor: pointer;
 }
@@ -118,18 +118,18 @@ input:focus{
     color: var(--sideNavsColor);
 }
 
-.pwd-details{
+.pwd_details{
     margin: 2rem 0rem;
     display: flex;
     justify-content: space-between;
 }
-.left-detail{
+.left_detail{
     color: var(--textColor);
 }
-.right-detail{
+.right_detail{
     color: var(--btn-hover-yellow);
 }
-.login-button{
+.login_button{
     background-color: var(--btn-hover-yellow);
     color: var(--BooksStat);
     padding: 1rem;
@@ -138,7 +138,7 @@ input:focus{
     border-radius: 5px;
     margin-bottom: 1.5rem;
 }
-.dont-have-account{
+.dont_have_account{
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -148,7 +148,7 @@ input:focus{
 
 
 
-.login-right{
+.login_right{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,16 +158,16 @@ input:focus{
     gap: 2rem;
     background-color: var(--sideBarBackgroundColor);
 }
-.login-right .title{
+.login_right .title{
     font-size: 20px;
     color: var(--textColor);
 }
-.login-right p{
+.login_right p{
     font-size: 14px;
     font-weight: 100;
     color: var(--btn-hover-yellow);
 }
-.page-circ{
+.page_circ{
     display: flex;
     justify-content: center;
     gap: 0.5rem;
