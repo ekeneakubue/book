@@ -12,7 +12,7 @@ export default function Signup() {
                     BookWorm
                 </div>
             </Link>
-            <form action="" onSubmit={handleSubmit}>
+            <form action="">
                 <div className="signup-form-title">
                     Create an account
                 </div>
