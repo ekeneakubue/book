@@ -1,12 +1,17 @@
 import React ,{ useId, useState} from 'react'
 import styles from './Login.module.css';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 const baseURL = 'https://bookworm-backend-1.onrender.com';
 
 
 export default function Login() {
+    const navigate = useNavigate();
+    const redirectToDashboard = () => {
+        navigate("/dashboard");
+    };
+
     const [successmessage, setSuccessmessage]= useState('')
     const [errormessage, setErrormessage]= useState('')
     const [formData, setFormData] = useState(
@@ -81,6 +86,7 @@ export default function Login() {
             console.log('Sign Up Response:', response.data);
             setSuccessmessage(response.data.message)
             setErrormessage(response.data.message); 
+            redirectToDashboard();
         } catch (error) {
             console.error('Sign Up Error:', error.response.data);
         }
