@@ -10,6 +10,10 @@
     --icon-hover-color: #8C5F16;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 header{
     display: flex;
     align-items: center;
@@ -19,22 +23,22 @@ header{
     font-optical-sizing: auto;
 }
 
-header .homeNavbar-l{
+header .homeNavbar_l{
     width: 40%;
 }
-.homeNavbar-l .home-brand{
+.homeNavbar_l .home_brand{
     display: flex;
     gap: 1rem;
     font-size: 20px;
     align-items: center;
 }
-header .homeNavbar-r{
+header .homeNavbar_r{
     width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.homeNavbar-r .navs{
+.homeNavbar_r .navs{
     width: 70%;
     padding: 0.5rem;
     font-size: 18px;
@@ -42,7 +46,7 @@ header .homeNavbar-r{
     gap: 2rem;
 }
 
-.homeNavbar-r .buttons{
+.homeNavbar_r .buttons{
     display: flex;
     justify-content: end;
     gap: 1rem;
@@ -51,7 +55,7 @@ header .homeNavbar-r{
 .buttons a{
     width: 50%;
 }
-.signup-btn{
+.signup_btn{
     background-color: var(--btn-hover-yellow);
     padding: 0.6rem 0rem;
     border: 1px solid var(--btn-hover-yellow);
@@ -60,7 +64,7 @@ header .homeNavbar-r{
     width: 100%;
 }
 
-.login-btn{
+.login_btn{
     background-color: transparent;
     padding: 0.6rem 0rem;
     border: 1px solid var(--sideNavsColor);
@@ -70,7 +74,7 @@ header .homeNavbar-r{
     width: 100%;
 }
 
-.hero-section{
+.hero_section{
     width: 100%;
     background-color: var(--HeroBgColor);
     display: flex;
@@ -81,14 +85,19 @@ header .homeNavbar-r{
     font-optical-sizing: auto;
 }
 
-.hero-left .title{  
+.hero_left .title{  
     width: 70%;  
-    font-size: 60px;
+    font-size: 55px;
+    margin-bottom: 1rem;
 }
-.hero-left p{
+.hero_left p{
     font-size: 18px;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+    
+    font-family: "Inter", sans-serif;
 }
-.getStarted-btn{
+.getStarted_btn{
     background-color: var(--btn-hover-yellow);
     padding: 0.6rem 0rem;
     border: 1px solid var(--btn-hover-yellow);

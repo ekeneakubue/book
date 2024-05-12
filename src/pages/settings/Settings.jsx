@@ -1,5 +1,5 @@
 import React from 'react'
-import './Settings.css'
+import styles from './Settings.module.css'
 import SideNavbar from '../../components/sideNavbar/SideNavbar'
 
 export default function Settings() {

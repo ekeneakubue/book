@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './Dashboard.module.css'
 import TopNavbar from '../../components/topNavbar/TopNavbar'
 import SideNavbar from '../../components/sideNavbar/SideNavbar'
 

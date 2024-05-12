@@ -1,5 +1,5 @@
 import React from 'react'
-import './SearchResult.css'
+import styles from './SearchResult.module.css'
 import SideNavbar from '../../components/sideNavbar/SideNavbar'
 
 export default function SearchResult() {
