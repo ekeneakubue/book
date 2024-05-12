@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { AccessFreeBooks } from './Data';
 import styles from './Home.module.css'
 
 export default function Home() {
@@ -44,6 +45,22 @@ export default function Home() {
                 <img src="images/home-hero-img.png" alt="" />
             </div>
         </div>
+        <section>
+            <div className={styles.access_freeBooks}>
+                <p>Access free Ebooks, Organize Study Materials, and Master your Subjects with AI-Powered Tools</p>
+                <div className={styles.free_access}>
+                    {
+                        AccessFreeBooks.map((item) =>                            
+                            <div className={styles.free_features}>
+                                <img src={item.image} alt="" />
+                                <h3>{item.title}</h3>
+                                <p>{item.description}</p>
+                            </div>                               
+                        )
+                    }                         
+                </div>
+            </div>
+        </section>
     </div>
   )
 }

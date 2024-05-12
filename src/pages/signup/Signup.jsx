@@ -1,15 +1,23 @@
 import React, { useId, useState } from 'react'
 import styles from './Signup.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { MdOutlineLock, MdOutlineEmail } from "react-icons/md"
 import { FcGoogle } from "react-icons/fc"
 import { LuEye } from "react-icons/lu"
 import { FaRegEyeSlash } from "react-icons/fa6"
 import { PiUserSquareLight } from "react-icons/pi"
+import axios from 'axios'
 
+const baseURL = 'https://bookworm-backend-1.onrender.com';
+const base= 'http://localhost:8000'
 
 export default function Signup() {
-
+    const navigate = useNavigate();
+    const redirectToLogin = () => {
+        navigate("/login");
+    };
+    const [successmessage, setSuccessmessage]= useState('')
+    const [errormessage, setErrormessage]= useState('')
     const [formData, setFormData] = useState(
 
         {
@@ -17,7 +25,6 @@ export default function Signup() {
             email: "",
             password: "",
             confirmPassword: "",
-            remember: false,
 
         }
     );
@@ -39,12 +46,12 @@ export default function Signup() {
     }
 
     // Handle submit function
-    function handleSubmit(event) {
+   async function handleSubmit(event) {
         event.preventDefault()
 
         const formValidation = {}
 
-        const regExp = /^[^\s@]+@[^\s@]+ [a-zA-Z0-9._]\.[^\s@]+$/;
+        // const regExp = /^[^\s@]+@[^\s@]+ [a-zA-Z0-9._]\.[^\s@]+$/;
 
         if (!formData.fullName.trim()) {
             formValidation.fullName = "! Field should not be empty"
@@ -52,10 +59,11 @@ export default function Signup() {
 
         if (!formData.email.trim()) {
             formValidation.email = "! Field should not be empty"
-        } else if (!regExp.test(formData.email)) {
-            formValidation.email = "! Please enter a valid email address"
-
         }
+        //  else if (!regExp.test(formData.email)) {
+        //     formValidation.email = "! Please enter a valid email address"
+
+        // }
 
         if (!formData.password.trim()) {
             formValidation.password = "! Password is required"
@@ -71,9 +79,29 @@ export default function Signup() {
         setErrors(formValidation)
 
         if (Object.keys(formValidation).length === 0) {
-            alert("Signed up successfully!")
+            alert("Signed up successfully! click ok to login")  
+            redirectToLogin();          
         }
-        console.log("Form submitted:", formData);
+       
+        // console.log("Form submitted:", formData);
+        
+    }
+
+    const handleOnClick=async()=>{
+        try {
+            const response = await axios.post(`${baseURL}/user/signup`, {
+               name:formData.fullName,
+               email:formData.email,
+               passWord:formData.password,
+            });
+
+            console.log('Sign Up Response:', response.data);
+            setSuccessmessage(response.data.message)
+            setErrormessage(response.data.message);
+            
+        } catch (error) {
+            console.error('Sign Up Error:', error.response.data);
+        }
     }
 
 
@@ -104,7 +132,8 @@ export default function Signup() {
                         <form onSubmit={handleSubmit}>
                             <div className={styles.accountinput_container}>
                                 <PiUserSquareLight className={styles.input_icon} />
-                                <input type='text'
+                                <input 
+                                    type='text'
                                     name='fullName'
                                     placeholder='Full name'
                                     onChange={handleChange}
@@ -146,15 +175,15 @@ export default function Signup() {
                                 />
                                 {
                                     showPassword ?
-                                    <LuEye
-                                        className={styles.eye_icon}
-                                        onClick={() => setShowPassword(!showPassword)}
-                                    />
+                                        <LuEye
+                                            className={styles.eye_icon}
+                                            onClick={() => setShowPassword(!showPassword)}
+                                        />
                                     :
-                                    <FaRegEyeSlash 
-                                        className={styles.eye_icon} 
-                                        onClick={() => setShowPassword(!showPassword)} 
-                                    />
+                                        <FaRegEyeSlash 
+                                            className={styles.eye_icon} 
+                                            onClick={() => setShowPassword(!showPassword)} 
+                                        />
                                 }
                             </div>
 
@@ -202,9 +231,11 @@ export default function Signup() {
                                 </label>
                             </div>
 
-                            <button type='submit' className={styles.signup}>Sign up</button>
+                            <button type='submit' className={styles.signup}  onClick={handleOnClick}>Sign up</button>
 
                             <p className={styles.bottom_text}>Already have an account?   <Link to='../login' className={styles.login}>Login</Link></p>
+                            {successmessage && <p>{successmessage}</p>}
+                            {errormessage && <p>{errormessage} </p>}
                         </form>
                     </div>
                 </div>
