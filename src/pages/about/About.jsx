@@ -1,5 +1,5 @@
 import React from 'react'
-import './About.css'
+import styles from './About.module.css'
 import SideNavbar from '../../components/sideNavbar/SideNavbar'
 
 export default function About() {

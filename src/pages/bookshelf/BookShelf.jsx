@@ -1,5 +1,5 @@
 import React from 'react'
-import './BookShelf.css'
+import styles from './BookShelf.module.css'
 import SideNavbar from '../../components/sideNavbar/SideNavbar'
 
 export default function BookShelf() {

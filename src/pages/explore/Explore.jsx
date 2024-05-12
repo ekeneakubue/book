@@ -1,5 +1,5 @@
 import React from 'react'
-import './Explore.css'
+import styles from './Explore.module.css'
 import SideNavbar from '../../components/sideNavbar/SideNavbar'
 
 export default function Explore() {

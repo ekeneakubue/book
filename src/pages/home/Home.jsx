@@ -1,33 +1,33 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Home.css'
+import styles from './Home.module.css'
 
 export default function Home() {
   return (
-    <div className='home'>
+    <div className={styles.home}>
         <header>
-            <div className="homeNavbar-l">                
-                <div className="home-brand"><img src="images/logo.jpg" alt="" /> BookWorm</div>
+            <div className={styles.homeNavbar_l}>                
+                <div className={styles.home_brand}><img src="images/logo.jpg" alt="" /> BookWorm</div>
             </div>
-            <div className="homeNavbar-r">
-                <div className="navs">
-                    <div className="nav-link">Features</div>
-                    <div className="nav-link">About Us</div>
-                    <div className="nav-link">Contact</div>               
+            <div className={styles.homeNavbar_r}>
+                <div className={styles.navs}>
+                    <div className={styles.nav_link}>Features</div>
+                    <div className={styles.nav_link}>About Us</div>
+                    <div className={styles.nav_link}>Contact</div>               
                 </div>
-                <div className='buttons'>
+                <div className={styles.buttons}>
                     <Link to = 'signup'>
-                        <button className="signup-btn">Sign Up</button>
+                        <button className={styles.signup_btn}>Sign Up</button>
                     </Link>
                     <Link to = 'login'>
-                        <button className="login-btn">Log In</button>
+                        <button className={styles.login_btn}>Log In</button>
                     </Link>
                 </div>
             </div>
         </header>
-        <div className="hero-section">
-            <div className="hero-left">
-                <div className="title">
+        <div className={styles.hero_section}>
+            <div className={styles.hero_left}>
+                <div className={styles.title}>
                     Ignite your learning journey with BookWorm
                 </div>
                 <p>
@@ -37,10 +37,10 @@ export default function Home() {
                     all at your finger tips.
                 </p>
                 <Link to = 'signup'>
-                    <button className="getStarted-btn">Get Started</button>
+                    <button className={styles.getStarted_btn}>Get Started</button>
                 </Link>
             </div>
-            <div className="hero-right">
+            <div className={styles.hero_right}>
                 <img src="images/home-hero-img.png" alt="" />
             </div>
         </div>

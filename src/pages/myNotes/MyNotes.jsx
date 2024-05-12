@@ -1,5 +1,5 @@
 import React from 'react'
-import './MyNotes.css'
+import styles from './MyNotes.module.css'
 import SideNavbar from '../../components/sideNavbar/SideNavbar'
 
 export default function MyNotes() {
