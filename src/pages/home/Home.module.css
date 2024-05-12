@@ -63,6 +63,10 @@ header .homeNavbar_r{
     font-size: 16px;
     width: 100%;
 }
+.signup_btn:hover{
+    color: var(--textColor);
+    background-color: var(--icon-hover-color);
+}
 
 .login_btn{
     background-color: transparent;
@@ -72,6 +76,10 @@ header .homeNavbar_r{
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
+}
+.login_btn:hover{
+    color: var(--BackgroundColor);
+    background-color: var(--textColor);
 }
 
 .hero_section{
@@ -106,4 +114,36 @@ header .homeNavbar_r{
     font-weight: 400;
     font-size: 18px;
     margin-top: 1rem;
+}
+.getStarted_btn:hover{
+    color: var(--textColor);
+    background-color: var(--icon-hover-color);
+}
+
+
+section{
+    padding: 6rem 4rem;
+}
+section p{
+    text-align: center;
+}
+.free_access{
+    display: flex;
+    flex-wrap:calc(50% - 30%);
+}
+.free_features{
+    width: 30%;
+    margin: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--HeroBgColor);
+}
+.free_features img{
+    display: flex;
+    margin: 1rem auto;
+    width: 100px;
 }

@@ -130,6 +130,7 @@ input:focus{
     color: var(--btn-hover-yellow);
 }
 .login_button{
+    width: 100%;
     background-color: var(--btn-hover-yellow);
     color: var(--BooksStat);
     padding: 1rem;
@@ -144,9 +145,6 @@ input:focus{
     gap: 1rem;
     font-size: 20px;
 }
-
-
-
 
 .login_right{
     display: flex;
@@ -165,6 +163,7 @@ input:focus{
 .login_right p{
     font-size: 14px;
     font-weight: 100;
+    margin-bottom: 1rem;
     color: var(--btn-hover-yellow);
 }
 .page_circ{
