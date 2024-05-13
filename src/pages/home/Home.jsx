@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { AccessFreeBooks } from './Data';
 import styles from './Home.module.css'
+import About from '../about/About';
 
 export default function Home() {
   return (
@@ -12,8 +13,8 @@ export default function Home() {
             </div>
             <div className={styles.homeNavbar_r}>
                 <div className={styles.navs}>
-                    <div className={styles.nav_link}>Features</div>
-                    <div className={styles.nav_link}>About Us</div>
+                    <div className={styles.nav_link}><a href="#features">Features</a></div>
+                    <div className={styles.nav_link}><a href="#about">About Us</a></div>
                     <div className={styles.nav_link}>Contact</div>               
                 </div>
                 <div className={styles.buttons}>
@@ -46,7 +47,7 @@ export default function Home() {
             </div>
         </div>
         <section>
-            <div className={styles.access_freeBooks}>
+            <div className={styles.access_freeBooks} id='features'>
                 <p>Access free Ebooks, Organize Study Materials, and Master your Subjects with AI-Powered Tools</p>
                 <div className={styles.free_access}>
                     {
@@ -61,6 +62,22 @@ export default function Home() {
                 </div>
             </div>
         </section>
+        
+        <div className={styles.study_potentials} id=''>
+            <div className={styles.study_potentials_text}>
+                <h1>Unlock your <br/>full study potential</h1>
+                <ul>
+                    <li>Browse the Ebook Library</li>
+                    <li>Organize Your Bookshelf</li>
+                    <li>Take Notes and Annotate</li>
+                    <li>Access AI-Powered Tools</li>
+                    <li>Ace Your Exams with Custom Quizzes</li>
+                </ul>
+                <button>Get Started</button>
+            </div>
+        </div>
+        
+        <About/>
     </div>
   )
 }
