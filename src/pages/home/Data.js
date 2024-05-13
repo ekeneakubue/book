@@ -17,22 +17,22 @@ export const AccessFreeBooks = [
         title: "Notetaking and Annotation",
         description: "Take notes, highlight text, and annotate ebooks directly within the app.",
     },
-    // {
-    //     id: 4,
-    //     image: `images/Ellipse24.png`,
-    //     title: "AI-powered Summarization",
-    //     description: "Get concise summaries of ebooks to aid comprehension and time management.",
-    // },
-    // {
-    //     id: 5,
-    //     image: `images/Ellipse25.png`,
-    //     title: "Book Query",
-    //     description: "Quickly find specific information within ebooks using AI-powered search functionality.",
-    // },
-    // {
-    //     id: 6,
-    //     image: `images/Ellipse26.png`,
-    //     title: "Custom Quiz Creation",
-    //     description: "Generate quizzes based on ebook content to test understanding and prepare for exams.",
-    // }    
+    {
+        id: 4,
+        image: `images/Ellipse24.png`,
+        title: "AI-powered Summarization",
+        description: "Get concise summaries of ebooks to aid comprehension and time management.",
+    },
+    {
+        id: 5,
+        image: `images/Ellipse25.png`,
+        title: "Book Query",
+        description: "Quickly find specific information within ebooks using AI-powered search functionality.",
+    },
+    {
+        id: 6,
+        image: `images/Ellipse26.png`,
+        title: "Custom Quiz Creation",
+        description: "Generate quizzes based on ebook content to test understanding and prepare for exams.",
+    }    
 ]
