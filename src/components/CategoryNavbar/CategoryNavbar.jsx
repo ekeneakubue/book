@@ -1,5 +1,5 @@
 import React from 'react'
-import './CategoryNavbar.css'
+import styles from './CategoryNavbar.module.css'
 
 export default function CategoryNavbar() {
   return (

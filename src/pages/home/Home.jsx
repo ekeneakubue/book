@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { AccessFreeBooks } from './Data';
 import styles from './Home.module.css'
 import About from '../about/About';
+import Footer from '../../components/footer/Footer';
 
 export default function Home() {
   return (
@@ -77,7 +78,8 @@ export default function Home() {
             </div>
         </div>
         
-        <About/>
+        <About />
+        <Footer />
     </div>
   )
 }
