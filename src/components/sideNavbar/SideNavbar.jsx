@@ -1,5 +1,5 @@
 import React from 'react';
-import './SideNavbar.css';
+import styles from './SideNavbar.module.css';
 import { RxDashboard } from "react-icons/rx";
 import { FiCompass } from "react-icons/fi";
 import { LuBookMinus } from "react-icons/lu";
@@ -11,36 +11,36 @@ import { Link } from 'react-router-dom';
 
 export default function SideNavbar() {
   return (
-    <div className='sideNavbar'>
-        <div className="top-nav">
+    <div className={styles.sideNavbar}>
+        <div className={styles.top_nav}>
             <Link to = '/'>
-                <div className="brand">
+                <div className={styles.brand}>
                     <img src="images/logo.jpg" alt="" />
                     <div>BookWorm</div>
                 </div>
             </Link>
-            <div className="sideNavs">
+            <div className={styles.sideNavs}>
                 <ul>
                     <Link to = '/'>
-                        <li className="side-nav-link"><RxDashboard className='icon'/> Dashboard</li>
+                        <li className={styles.side_nav_link}><RxDashboard className={styles.icon}/> Dashboard</li>
                     </Link>
                     <Link to = 'explore'>
-                        <li className="side-nav-link"><FiCompass className='icon'/> Explore</li>
+                        <li className={styles.side_nav_link}><FiCompass className={styles.icon}/> Explore</li>
                     </Link>
                     <Link to = 'bookshelf'>
-                        <li className="side-nav-link"><LuBookMinus className='icon'/> My Bookshelf</li>
+                        <li className={styles.side_nav_link}><LuBookMinus className={styles.icon}/> My Bookshelf</li>
                     </Link>
                     <Link to = 'about'>
-                        <li className="side-nav-link"><BsBookmarksFill className='icon'/> About</li>
+                        <li className={styles.side_nav_link}><BsBookmarksFill className={styles.icon}/> About</li>
                     </Link>
                     <Link to = 'settings'>
-                        <li className="side-nav-link"><RiSettingsLine className='icon'/> Settings</li>
+                        <li className={styles.side_nav_link}><RiSettingsLine className={styles.icon}/> Settings</li>
                     </Link>
                 </ul>
             </div>            
         </div>        
-        <div className="down-navbar">
-            <TbLogout2 className='icon'/> Log out
+        <div className={styles.down_navbar}>
+            <TbLogout2 className={styles.icon}/> Log out
         </div>        
     </div>
   )

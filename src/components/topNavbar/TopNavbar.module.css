@@ -10,29 +10,29 @@
     --icon-hover-color: #8C5F16;
 }
 
-.top-navbar{
+.top_navbar{
     display: flex;
     gap: 3rem;
     justify-content: space-between;
     padding: 1rem;
 }
-.top-navbar .left-bar{
+.top_navbar .left_bar{
     /* background-color: red; */
     display: flex;
     gap: 1rem;
     width: 80%;
 }
-.top-navbar .left-bar button{
+.top_navbar .left_bar button{
     width: 20%;
     background-color: transparent;
     border: 1px solid var(--textColor);
     color: var(--textColor);
     border-radius: 10px;
 }
-.top-navbar .left-bar form{
+.top_navbar .left_bar form{
     width: 70%;
 }
-.search-box{
+.search_box{
     background-color: var(--Search-box-bg);
     width: 100%;
     padding: 0.6rem 1rem;
@@ -41,7 +41,7 @@
     justify-content: space-between;
     border-radius: 10px;
 }
-.search-box input{
+.search_box input{
     background-color: transparent;
     border: 0px solid;
     height: 20px;
@@ -50,7 +50,7 @@
     color: var(--textColor);  
     padding: 1rem;
 }
-.search-box.icon{
+.search_box.icon{
     font-size: 30px;
     cursor: pointer;
 }
@@ -63,7 +63,7 @@ input:focus{
 }
 
 
-.top-navbar .right-bar{
+.top_navbar .right_bar{
     display: flex;
     align-items: center;
     justify-content: end;

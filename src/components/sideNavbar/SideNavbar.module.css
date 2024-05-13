@@ -24,13 +24,13 @@ a{
     flex-direction: column;
     justify-content: space-between;
 }
-.top-nav{
+.top_nav{
     display: flex;
     flex-direction: column;
     color: var(--sideNavsColor);
     gap: 4rem;     
 }
-.top-nav .brand{
+.top_nav .brand{
     color: var(--textColor);
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@ a{
 .brand img{
     width: 40px;
 }
-.side-nav-link{
+.side_nav_link{
     display: flex;
     align-items: center;
     gap: 0.6rem;  
@@ -51,17 +51,17 @@ a{
     font-size: 16px;
     color: var(--sideNavsColor);
 }
-.side-nav-link:hover {       
+.side_nav_link:hover {       
     border-radius: 7px;
     background-color: var(--btn-hover-yellow);
     color: var(--Black);
 }
 
-.side-nav-link .icon{
+.side_nav_link .icon{
     font-size: 25px;
     color: var(--sideBarIcons);
 }
-.side-nav-link:hover .icon{
+.side_nav_link:hover .icon{
     font-size: 25px;
     color: var(--icon-hover-color);
 }
@@ -74,7 +74,7 @@ ul{
 ul li{
     list-style: none;    
 }
-.down-navbar{
+.down_navbar{
     display: flex;
     align-items: center;
     font-weight: 100;
@@ -82,16 +82,16 @@ ul li{
     padding: 0.5rem;
     padding-left: 1.5rem; 
 }
-.down-navbar .icon{
+.down_navbar .icon{
     font-size: 25px;
     color: var(--sideBarIcons);
 }
-.down-navbar:hover{
+.down_navbar:hover{
     border-radius: 7px;
     background-color: var(--btn-hover-yellow);
     color: var(--Black);
 }
-.down-navbar:hover .icon{
+.down_navbar:hover .icon{
     font-size: 25px;
     color: var(--icon-hover-color); 
 }
