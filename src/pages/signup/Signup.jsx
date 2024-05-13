@@ -130,7 +130,7 @@ export default function Signup() {
                         </div>
 
                         <form onSubmit={handleSubmit}>
-                            <div className={styles.accountinput_container}>
+                            <div className={styles.input_container}>
                                 <PiUserSquareLight className={styles.input_icon} />
                                 <input 
                                     type='text'
