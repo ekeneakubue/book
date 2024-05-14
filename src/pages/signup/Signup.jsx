@@ -241,10 +241,12 @@ export default function Signup() {
                 </div>
 
                 <div className={styles.right_page}>
-                    <img src="images/login-pic.png" alt="woman-reading-a-book" />
+                    <img src="images/signup-pic.png"className={styles.user} alt="woman-reading-a-book" />
 
                     <p>Let's Get You Started</p>
                     <p className={styles.open}>Open the pages to a world of free reads!</p>
+                    <img src= "images/Frame 34653.png" className={styles.circle}/>
+                  
                 </div>
             </div>
 
