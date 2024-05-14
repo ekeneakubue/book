@@ -1,0 +1,223 @@
+
+:root{
+    --BackgroundColor: #192E32;
+    --BooksStat: #192426;
+    --HeroBgColor: #27373A;
+    --textColor: #e9e6e6;
+    --sideNavsColor: #A0C6D0;
+    --sideBarBackgroundColor: #243F46;
+    --sideBarIcons: #54838F;
+    --btn-hover-yellow: #FFC25E;
+    --icon-hover-color: #8C5F16;
+    --input-outline-color:#97AAAD;
+    --error-message-color:#ff0000;
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+
+.signup_container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:90vh;
+   
+
+}
+.logo{
+    display:flex ;
+    align-items: center;
+    margin-top:80px;
+    
+}
+
+.logo > img{
+    width:40px;
+    margin-left:30px;
+    
+}
+
+.logo_text{
+    font-family: "Poppins", sans-serif; 
+    color: var(--textColor);
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 21.15px;
+    margin-left: 10px;
+   
+}
+
+.left_page{
+    font-family: "Inter", sans-serif;
+    background-color: var(--BackgroundColor);
+    text-align: left;
+    width:50%;
+    padding-left: 30px;
+   
+   
+
+   
+}
+
+.account{
+   margin-top: 40px;
+   margin-left: 30px;
+}
+
+.account > h2 {
+    margin-bottom: 0px;
+    margin-top: -20px;
+    font-size:2rem;
+    font-weight: 500px;
+    line-height: 48px;
+}
+
+.account > p{
+    font-size: 0.8rem;
+    font-weight: 400px;
+    margin-bottom: 20px;
+}
+
+
+.social_btn{
+    color: var(--White);
+    width:80%;
+    background: transparent;
+    margin-left:3px;
+    padding:0.5rem 1.2rem 0.5rem 0.6rem ;
+    border: 1px solid var(--input-outline-color);
+    border-radius: 5px;
+    outline:none;
+    
+}
+
+.social_btn:hover{
+    cursor: pointer;
+}
+
+.google_icon{
+
+    margin-right:10px;
+    margin-top:2px;
+
+}
+  
+
+.line{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.line p{
+    color:var(--input-outline-color)
+}
+hr{
+    width:37%;
+    height: 0%;
+    margin-left: 5px;
+    margin-right: 6px;
+    border: 1px solid var(--input-outline-color);
+    
+}
+
+.input_container{
+    position: relative;
+}
+
+.input_box{
+    width:80%;
+    padding:10px;
+    padding-left: 30px;
+    border:1px solid var(--input-outline-color);
+    border-radius: 5px;
+    margin-top: 10px;
+    background: transparent;
+    color:var(--input-outline-color)
+
+    
+}
+
+.input_icon {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    left: 10px; 
+    color: var(--input-outline-color);
+  }
+
+  .input:focus{
+    border:5px solid var(--input-outline-color);
+  }
+
+  .eye_icon {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    right: 23%; 
+    cursor: pointer;
+    color: var(--input-outline-color);
+  }
+
+
+
+.remember{
+    margin-top:5px;
+}
+
+.checkbox{
+    margin:1rem 0.6rem;
+}
+
+
+.signup{
+    background-color: var(--btn-hover-yellow);
+    width: 80%;
+    border:none;
+    border-radius: 5px;
+    padding:11px;
+    margin-top: 2px;
+}
+
+.signup:hover{
+    padding:11px;
+    /* border:1px solid var(--sideBarBackgroundColor); */
+    cursor: pointer;
+}
+
+form .bottom_text{
+    margin-top: 10px;
+    margin-left:9rem;
+}
+
+.login{
+    color:var(--btn-hover-yellow);
+}
+
+.right_page{
+    font-family: "Inter", sans-serif;
+    background-color: var(--sideBarBackgroundColor);
+    text-align: center;
+    width:50%;
+    height: 121%;
+    
+}
+
+.right_page > img{
+    margin: 100px 0px 20px 0px;
+}
+
+
+.open{
+    color: var(--btn-hover-yellow);
+}
+
+.error{
+    font-size: 0.8rem;
+    color:var(--error-message-color);
+    
+}
