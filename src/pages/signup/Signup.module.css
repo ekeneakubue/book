@@ -32,13 +32,15 @@
 .logo{
     display:flex ;
     align-items: center;
-    margin-top:80px;
+    margin-top:60px;
+    
     
 }
 
 .logo > img{
     width:40px;
-    margin-left:30px;
+    margin-left:20px;
+   
     
 }
 
@@ -65,22 +67,22 @@
 }
 
 .account{
-   margin-top: 40px;
-   margin-left: 30px;
+   margin-top: 100px;
+   margin-left: 50px;
 }
 
 .account > h2 {
     margin-bottom: 0px;
     margin-top: -20px;
-    font-size:2rem;
+    font-size:3rem;
     font-weight: 500px;
-    line-height: 48px;
+    line-height: 60px;
 }
 
 .account > p{
     font-size: 0.8rem;
     font-weight: 400px;
-    margin-bottom: 20px;
+    line-height: 20px;
 }
 
 
@@ -89,6 +91,7 @@
     width:80%;
     background: transparent;
     margin-left:3px;
+    margin-top: 8px;
     padding:0.5rem 1.2rem 0.5rem 0.6rem ;
     border: 1px solid var(--input-outline-color);
     border-radius: 5px;
@@ -103,7 +106,7 @@
 .google_icon{
 
     margin-right:10px;
-    margin-top:2px;
+    margin-top:4px;
 
 }
   
@@ -180,12 +183,11 @@ hr{
     border:none;
     border-radius: 5px;
     padding:11px;
-    margin-top: 2px;
+    margin-top: 20px;
 }
 
 .signup:hover{
     padding:11px;
-    /* border:1px solid var(--sideBarBackgroundColor); */
     cursor: pointer;
 }
 
@@ -207,8 +209,15 @@ form .bottom_text{
     
 }
 
-.right_page > img{
-    margin: 100px 0px 20px 0px;
+.right_page .user{
+    margin: 180px 0px 20px 0px;
+    width:300px;
+    height:300px;
+
+}
+
+.right_page .circle{
+    margin-top:40px;
 }
 
 
