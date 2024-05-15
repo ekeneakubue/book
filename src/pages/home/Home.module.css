@@ -114,7 +114,6 @@ header .homeNavbar_r{
     font-size: 18px;
     margin-bottom: 1rem;
     line-height: 1.5rem;   
-    font-weight: lighter;
 }
 .getStarted_btn{
     background-color: var(--btn-hover-yellow);
@@ -146,7 +145,7 @@ section p{
 .free_features{
     width: 90%;
     margin: 1rem;
-    padding: 1rem 4rem;
+    padding: 1rem 2rem 2rem;
     border-radius: 10px;
     text-align: center;
     display: flex;
@@ -159,7 +158,14 @@ section p{
     margin: 1rem auto;
     width: 100px;
 }
-
+.free_features h3{    
+    color: var(--textColor);
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+.free_features p{
+    color: var(--sideNavsColor);
+}
 .study_potentials{
     background-image: url('Group7777.png');
     background-position: center;
