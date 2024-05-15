@@ -114,6 +114,7 @@ header .homeNavbar_r{
     font-size: 18px;
     margin-bottom: 1rem;
     line-height: 1.5rem;   
+    font-weight: lighter;
 }
 .getStarted_btn{
     background-color: var(--btn-hover-yellow);

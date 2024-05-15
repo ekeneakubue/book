@@ -4,6 +4,7 @@ import { AccessFreeBooks } from './Data';
 import styles from './Home.module.css'
 import About from '../about/About';
 import Footer from '../../components/footer/Footer';
+import FeedBack from '../../components/feedBack/FeedBack';
 
 export default function Home() {
   return (
@@ -77,7 +78,7 @@ export default function Home() {
                 <button>Get Started</button>
             </div>
         </div>
-        
+        <FeedBack />
         <About />
         <div id="contacts">
             <Footer />           
