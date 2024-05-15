@@ -28,9 +28,10 @@
 }
 .about_us p{
     margin: 1rem 0rem;
-    line-height: 1.5rem;
-    font-size: 18px;
+    line-height: 2rem;
+    font-size: 16px;
     font-weight: lighter;
+    color: var(--sideNavsColor);
 }
 .about_us .left {
     width: 50%;
@@ -50,9 +51,10 @@
 }
 .mission p{
     margin: 1rem 0rem;
-    line-height: 1.5rem;
-    font-size: 18px;
+    line-height: 2rem;
+    font-size: 16px;
     font-weight: lighter;
+    color: var(--sideNavsColor);
 }
 .mission .left{
     width: 50%;
