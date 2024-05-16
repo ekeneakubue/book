@@ -29,7 +29,7 @@ const MyCarousel = () => {
 
   return (
     <div style={CONTAINER_STYLE}>
-      <ReactCardCarousel autoplay={true} autoplay_speed={10000}>
+      <ReactCardCarousel autoplay={true} autoplay_speed={6000}>
         <div style={CARD_STYLE}  className={styles.cards}>
           <img src="images/rachael.png" alt="" />
           <p>

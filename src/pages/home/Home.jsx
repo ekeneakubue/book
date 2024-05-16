@@ -5,6 +5,7 @@ import styles from './Home.module.css'
 import About from '../about/About';
 import Footer from '../../components/footer/Footer';
 import FeedBack from '../../components/feedBack/FeedBack';
+import WhyBookworm from '../../components/whyBookworm/WhyBookworm';
 
 export default function Home() {
   return (
@@ -80,6 +81,7 @@ export default function Home() {
         </div>
         <FeedBack />
         <About />
+        <WhyBookworm />
         <div id="contacts">
             <Footer />           
         </div>        
