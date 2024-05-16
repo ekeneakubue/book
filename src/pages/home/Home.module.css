@@ -1,0 +1,202 @@
+:root{
+    --BackgroundColor: #192E32;
+    --BooksStat: #192426;
+    --HeroBgColor: #27373A;
+    --textColor: #e9e6e6;
+    --sideNavsColor: #A0C6D0;
+    --sideBarBackgroundColor: #243F46;
+    --sideBarIcons: #54838F;
+    --btn-hover-yellow: #FFC25E;
+    --icon-hover-color: #8C5F16;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+.home, section{
+    border: 0px;
+    margin: 0px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+header .homeNavbar_l{
+    width: 40%;
+}
+.homeNavbar_l .home_brand{
+    display: flex;
+    gap: 1rem;
+    font-size: 20px;
+    align-items: center;
+}
+header .homeNavbar_r{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.homeNavbar_r .navs{
+    width: 70%;
+    padding: 0.5rem;
+    font-size: 18px;
+    display: flex;
+    gap: 2rem;
+}
+
+.homeNavbar_r .buttons{
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    width: 30%;
+}
+.homeNavbar_r a{
+    color: var(--textColor);
+}
+.homeNavbar_r a:hover{
+    color: var(--sideNavsColor);
+}
+.buttons a{
+    width: 50%;
+}
+.signup_btn{
+    background-color: var(--btn-hover-yellow);
+    padding: 0.6rem 0rem;
+    border: 1px solid var(--btn-hover-yellow);
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+.signup_btn:hover{
+    color: var(--textColor);
+    background-color: var(--icon-hover-color);
+}
+
+.login_btn{
+    background-color: transparent;
+    padding: 0.6rem 0rem;
+    border: 1px solid var(--sideNavsColor);
+    color: var(--textColor);
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+.login_btn:hover{
+    color: var(--BackgroundColor);
+    background-color: var(--textColor);
+}
+
+.hero_section{
+    width: 100%;
+    background-color: var(--HeroBgColor);
+    display: flex;
+    align-items: center;
+    padding: 0rem 4rem;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.hero_left .title{  
+    width: 70%;  
+    font-size: 55px;
+    margin-bottom: 1rem;
+}
+.hero_left p{
+    font-size: 18px;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;   
+}
+.getStarted_btn{
+    background-color: var(--btn-hover-yellow);
+    padding: 0.6rem 0rem;
+    border: 1px solid var(--btn-hover-yellow);
+    border-radius: 5px;
+    width: 25%;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 1rem;
+}
+.getStarted_btn:hover{
+    color: var(--textColor);
+    background-color: var(--icon-hover-color);
+}
+
+
+section{
+    padding: 6rem 4rem 0rem;
+}
+section p{
+    text-align: center;
+}
+.free_access{ 
+    margin-top: 2rem; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  
+}
+.free_features{
+    width: 90%;
+    margin: 1rem;
+    padding: 1rem 2rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--HeroBgColor);
+}
+.free_features img{
+    display: flex;
+    margin: 1rem auto;
+    width: 100px;
+}
+.free_features h3{    
+    color: var(--textColor);
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+.free_features p{
+    color: var(--sideNavsColor);
+}
+.study_potentials{
+    background-image: url('Group7777.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    position: relative;
+}
+.study_potentials_text{
+    width: 40%;
+    height: 40vh;
+    position: absolute;
+    right: 3rem;
+    bottom: 12rem;
+}
+.study_potentials_text h1{
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+ul li{
+    list-style: circle;
+    margin-left: 1rem;
+}
+.study_potentials_text button{
+    margin: 1rem 0rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--btn-hover-yellow);
+    background-color: var(--btn-hover-yellow);    
+}
+.study_potentials_text button:hover{
+    background-color: var(--icon-hover-color);
+    color: var(--textColor);
+}
