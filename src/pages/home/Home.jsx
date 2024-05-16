@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { AccessFreeBooks } from './Data';
 import styles from './Home.module.css'
-import About from '../about/About';
 import Footer from '../../components/footer/Footer';
-import FeedBack from '../../components/feedBack/FeedBack';
+// import FeedBack from '../../components/feedBack/FeedBack';
 import WhyBookworm from '../../components/whyBookworm/WhyBookworm';
+import AbouotUs from '../../components/aboutus/AbouotUs';
 
 export default function Home() {
   return (
@@ -79,8 +79,10 @@ export default function Home() {
                 <button>Get Started</button>
             </div>
         </div>
-        <FeedBack />
-        <About />
+        {/* <FeedBack /> */}
+        <div className={styles.aboutus} id='about'>
+            <AbouotUs />
+        </div>            
         <WhyBookworm />
         <div id="contacts">
             <Footer />           

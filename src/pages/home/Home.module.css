@@ -8,6 +8,7 @@
     --sideBarIcons: #54838F;
     --btn-hover-yellow: #FFC25E;
     --icon-hover-color: #8C5F16;
+    --about-bg-color: #213336;
 }
 html{
     scroll-behavior: smooth;
@@ -16,6 +17,7 @@ html{
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
+
 .home, section{
     border: 0px;
     margin: 0px;
@@ -199,4 +201,10 @@ ul li{
 .study_potentials_text button:hover{
     background-color: var(--icon-hover-color);
     color: var(--textColor);
+}
+
+
+.aboutus{
+    padding: 4rem;
+    background-color: var(--about-bg-color);
 }
