@@ -111,11 +111,7 @@ export default function Login() {
                     <button className={styles.google_btn}>
                         <img src="images/g.png" alt="" />
                         Google
-                    </button>
-                    <button className={styles.twitter_btn}>
-                        <img src="images/twit.png" alt="" />
-                        Twitter
-                    </button>
+                    </button>                    
                 </div> 
                 <div className={styles.or}>
                     <hr />or<hr />    
@@ -156,7 +152,8 @@ export default function Login() {
             </form>
         </div>
         <div className={styles.login_right}>
-            <img src="images/login-pic.png" alt="" />
+            <img src="images/login-pic.png" className={styles.user} alt="woman-reading-a-book" />
+                
             <div>
                 <div className={styles.title}>Let's Begin</div>
                 <p>Open the pages to a world of free reads!</p>
