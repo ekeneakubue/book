@@ -1,0 +1,21 @@
+:root{
+  --BackgroundColor: #192E32;
+  --textColor: #FFFFFF;
+  --sideBarBackgroundColor:#243F46;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: var(--BackgroundColor);
+  color: var(--textColor);
+}
+
+main{
+  width: 100%;
+  padding: 2rem 2rem;
+}
+
+.bookworm-main{
+  display: flex;
+}
