@@ -7,4 +7,33 @@
     --sideBarIcons: #54838F;
     --btn-hover-yellow: #FFC25E;
     --icon-hover-color: #8C5F16;
+    --hero-bg-color: #27373A;
 }
+.dashboard_container{
+    width: 73%;
+    margin: 1rem 0rem 1rem 1rem;  
+}
+.dash_hero_section{  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;  
+    padding: 2rem;
+    background-color: var(--hero-bg-color);
+}
+.dash_hero_section .left h2{
+    font-size: 50px;
+}
+.dash_hero_section .left p{
+    font-size: 25px;
+    margin-top: 1rem;
+}
+.dash_hero_section .left button{
+    margin: 1.5rem 0rem 0rem 0rem;
+    width: 30%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: var(--btn-hover-yellow);
+}
+
