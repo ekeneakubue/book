@@ -10,6 +10,7 @@
     --icon-hover-color: #8C5F16;
     --about-bg-color: #213336;
 }
+
 html{
     scroll-behavior: smooth;
 }
@@ -29,6 +30,10 @@ header{
     padding: 2rem 4rem;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
+    background-color: var(--BackgroundColor);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
 }
 
 header .homeNavbar_l{
@@ -37,7 +42,7 @@ header .homeNavbar_l{
 .homeNavbar_l .home_brand{
     display: flex;
     gap: 1rem;
-    font-size: 20px;
+    font-size: 25px;
     align-items: center;
 }
 header .homeNavbar_r{
@@ -49,7 +54,7 @@ header .homeNavbar_r{
 .homeNavbar_r .navs{
     width: 70%;
     padding: 0.5rem;
-    font-size: 18px;
+    font-size: 25px;
     display: flex;
     gap: 2rem;
 }
@@ -74,7 +79,7 @@ header .homeNavbar_r{
     padding: 0.6rem 0rem;
     border: 1px solid var(--btn-hover-yellow);
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
     width: 100%;
 }
 .signup_btn:hover{
@@ -88,7 +93,7 @@ header .homeNavbar_r{
     border: 1px solid var(--sideNavsColor);
     color: var(--textColor);
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
     width: 100%;
 }
 .login_btn:hover{
@@ -101,7 +106,7 @@ header .homeNavbar_r{
     background-color: var(--HeroBgColor);
     display: flex;
     align-items: center;
-    padding: 0rem 4rem;
+    padding: 7rem 4rem 0rem;
     position: relative;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -138,6 +143,12 @@ section{
 }
 section p{
     text-align: center;
+}
+.access_freeBooks{
+    padding-top: 2rem;
+}
+.access_freeBooks > p{
+    font-size: 30px;
 }
 .free_access{ 
     margin-top: 2rem; 
@@ -205,6 +216,6 @@ ul li{
 
 
 .aboutus{
-    padding: 4rem;
+    padding: 8rem 4rem 4rem;
     background-color: var(--about-bg-color);
 }

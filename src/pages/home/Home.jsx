@@ -49,9 +49,9 @@ export default function Home() {
                 <img src="images/home-hero-img.png" alt="" />
             </div>
         </div>
-        <section>
-            <div className={styles.access_freeBooks} id='features'>
-                <p>Access free Ebooks, Organize Study Materials, and Master your Subjects with AI-Powered Tools</p>
+        <section id='features'>
+            <div className={styles.access_freeBooks} >
+                <p>Access free Ebooks, Organize Study Materials, and <br /> Master your Subjects with AI-Powered Tools</p>
                 <div className={styles.free_access}>
                     {
                         AccessFreeBooks.map((item) =>                            

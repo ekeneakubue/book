@@ -10,6 +10,8 @@ import About from './pages/about/About';
 import Home from './pages/home/Home';
 import Signup from './pages/signup/Signup';
 import Login from './pages/login/Login';
+// import Lifestyle from './components/category/lifestyle/Lifestyle';
+// import Novels from './components/category/Novels';
 
 function App() {
   return (
@@ -17,7 +19,7 @@ function App() {
       <div className='bookworm-main'>
       <Routes>
         <Route path = '/' element = {<Home />} />
-        <Route path = '/dashboard' element = {<Dashboard />} />
+        <Route path = '/dashboard' element = {<Dashboard />} />          
         <Route path = '/bookshelf' element = {<BookShelf />} />
         <Route path = '/explore' element = {<Explore />} />
         <Route path = '/about' element = {<About />} />
@@ -26,6 +28,8 @@ function App() {
         <Route path = '/settings' element = {<Settings />} />
         <Route path = '/signup' element = {<Signup />} />
         <Route path = '/login' element = {<Login />} />
+        {/* <Route path = '/lifestyle' element = {<Lifestyle />} /> */}
+        {/* <Route path = '/novels' element = {<Novels />} /> */}
       </Routes>
       </div>
     </BrowserRouter>
