@@ -2,14 +2,17 @@ import React from 'react'
 import styles from './Dashboard.module.css'
 import TopNavbar from '../../components/topNavbar/TopNavbar'
 import SideNavbar from '../../components/sideNavbar/SideNavbar'
-import Lifestyle from '../../components/category/lifestyle/Lifestyle'
+import Tab from '../../components/category/novels/Tab'
+import { IoBookOutline } from "react-icons/io5";
 
 export default function Dashboard() {
   return (
     <>
       <SideNavbar/>
       <main>
-        <TopNavbar/>
+        <div className={styles.topp}>
+          <TopNavbar />
+        </div>        
         <div className={styles.dashboard}>
           <div className={styles.dashboard_container}>
             <div className={styles.dash_hero_section}>
@@ -20,10 +23,17 @@ export default function Dashboard() {
               </div>
               <div className={styles.right}><img src="images/dashboardHeroBook.png" alt="" /></div>
             </div>
-            <Lifestyle />
+            <Tab />
           </div>
           <div className={styles.bookshelf_container}>
-
+              <div className={styles.shelf_menu}>
+                <div className={styles.book_stat}>
+                  <IoBookOutline />
+                  Books Read
+                  <h1>0</h1>
+                </div> 
+                <div className={styles.book_stat}>Books Saved</div>               
+              </div>
           </div>
         </div>
       </main>    
