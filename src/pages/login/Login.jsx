@@ -86,7 +86,7 @@ export default function Login() {
             console.log('Sign Up Response:', response.data);
             setSuccessmessage(response.data.message)
             setErrormessage(response.data.message); 
-            redirectToDashboard();
+            // redirectToDashboard();
         } catch (error) {
             console.error('Sign Up Error:', error.response.data);
         }

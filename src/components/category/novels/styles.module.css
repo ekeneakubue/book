@@ -1,0 +1,72 @@
+:root{
+  --BackgroundColor: #192E32;
+  --BooksStat: #192426;
+  --HeroBgColor: #27373A;
+  --textColor: #e9e6e6;
+  --sideNavsColor: #A0C6D0;
+  --sideBarBackgroundColor: #243F46;
+  --sideBarIcons: #54838F;
+  --btn-hover-yellow: #FFC25E;
+  --icon-hover-color: #8C5F16;
+  --about-bg-color: #213336;
+}
+
+
+.container {
+    width: 100%;
+    margin-top: 3rem;
+  }
+   
+  .tab_list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0rem 2rem;
+    gap: 2rem;       
+  } 
+  .tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .active_tabs {
+    padding: 0.5rem;
+    background: var(--btn-hover-yellow);
+    color: var(--BooksStat);
+  }
+    
+  .content {
+      display: none;
+      margin-top: 2rem;
+      padding: 10px;
+      min-height: 30vh;
+  }
+  
+  .active_content {
+      display: flex;
+  }
+
+
+
+  /* card style */
+  .category_card{   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.cat_body{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    width: 90%;
+    margin: 1rem auto; 
+}
+.cat_body p{
+    font-size: 12px;
+    color: var(--sideNavsColor);
+}
+.cat_body img{
+    width: 100%;
+}

@@ -1,4 +1,4 @@
-export const lifestyle = [
+export const popular = [
     {
         id: 1,
         image: `images/cate1.png`,
@@ -41,21 +41,7 @@ export const lifestyle = [
         title: "Twisted Love",
         author: "Ana Huang",
         rate: "4"
-    },  
-    {
-        id: 7,
-        image: `images/cate1.png`,
-        title: "Atomic Habits",
-        author: "James Clear",
-        rate: "4"
-    }, 
-    {
-        id: 8,
-        image: `images/cate2.png`,
-        title: "The 48 Laws of Power",
-        author: "Robert Greene and Joost Elffers",
-        rate: "3.5"
-    },    
+    }    
 ]
 
 
@@ -82,4 +68,21 @@ export const novels = [
         rate: "4"
     },   
          
+]
+
+export const science = [
+    {
+        id: 1,
+        image: `images/cate1.png`,
+        title: "Atomic Habits",
+        author: "James Clear",
+        rate: "4"
+    }, 
+    {
+        id: 2,
+        image: `images/cate2.png`,
+        title: "The 48 Laws of Power",
+        author: "Robert Greene and Joost Elffers",
+        rate: "3.5"
+    }        
 ]
