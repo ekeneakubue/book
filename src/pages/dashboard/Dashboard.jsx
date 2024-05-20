@@ -27,18 +27,39 @@ export default function Dashboard() {
             <Tab />
           </div>
           <div className={styles.bookshelf_container}>
-              <div className={styles.shelf_menu}>
-                <div className={styles.book_stat}>
-                  <PiBookBookmarkDuotone />                  
-                  Books Read
-                  <h1>0</h1>
-                </div> 
-                <div className={styles.book_stat}>
-                  <IoBookOutline />
-                  Books Saved
-                  <h1>0</h1>
-                </div>               
-              </div>
+            <div className={styles.shelf_menu}>
+              <div className={styles.book_stat}>
+                <PiBookBookmarkDuotone />                  
+                Books Read
+                <h1>0</h1>
+              </div> 
+              <div className={styles.book_stat}>
+                <IoBookOutline />
+                Books Saved
+                <h1>0</h1>
+              </div>               
+            </div> 
+            <h3>My Bookshelf</h3> 
+            <div className={styles.table}>
+              <div className={styles.first_row}></div> 
+              <div className={styles.second_row}>
+                <div className={styles.rack}><span>UNN Journal</span></div> 
+                <div className={styles.rack}><span>Love Doctor Journal</span></div> 
+                <div className={styles.rack}><span>Love Doctor Journal</span></div>
+                <div className={styles.rack}><span>Love Doctor Journal</span></div>       
+              </div>  
+              <div className={styles.third_row}></div> 
+              <div className={styles.first_row}></div> 
+              <div className={styles.second_row}>
+                <div className={styles.rack}><span>UNN Journal</span></div> 
+                <div className={styles.rack}><span>Love Doctor Journal</span></div> 
+                <div className={styles.rack}><span>Love Doctor Journal</span></div>
+                <div className={styles.rack}><span>Love Doctor Journal</span></div>          
+              </div>  
+              <div className={styles.third_row}>
+
+              </div>     
+            </div>            
           </div>
         </div>
       </main>    
