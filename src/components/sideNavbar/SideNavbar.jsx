@@ -29,10 +29,7 @@ export default function SideNavbar() {
                     </Link>
                     <Link to = '/bookshelf'>
                         <li className={styles.side_nav_link}><LuBookMinus className={styles.icon}/> My Bookshelf</li>
-                    </Link>
-                    <Link to = '/about'>
-                        <li className={styles.side_nav_link}><BsBookmarksFill className={styles.icon}/> About</li>
-                    </Link>
+                    </Link>                    
                     <Link to = '/settings'>
                         <li className={styles.side_nav_link}><RiSettingsLine className={styles.icon}/> Settings</li>
                     </Link>
