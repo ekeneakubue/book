@@ -6,12 +6,9 @@ import Explore from './pages/explore/Explore';
 import MyNotes from './pages/myNotes/MyNotes';
 import SearchResult from './pages/searchResult/SearchResult';
 import Settings from './pages/settings/Settings';
-import About from './pages/about/About';
 import Home from './pages/home/Home';
 import Signup from './pages/signup/Signup';
 import Login from './pages/login/Login';
-// import Lifestyle from './components/category/lifestyle/Lifestyle';
-// import Novels from './components/category/Novels';
 
 function App() {
   return (
@@ -22,14 +19,11 @@ function App() {
         <Route path = '/dashboard' element = {<Dashboard />} />          
         <Route path = '/bookshelf' element = {<BookShelf />} />
         <Route path = '/explore' element = {<Explore />} />
-        <Route path = '/about' element = {<About />} />
         <Route path = '/mynotes' element = {<MyNotes />} />
         <Route path = '/searchresult' element = {<SearchResult />} />
         <Route path = '/settings' element = {<Settings />} />
         <Route path = '/signup' element = {<Signup />} />
         <Route path = '/login' element = {<Login />} />
-        {/* <Route path = '/lifestyle' element = {<Lifestyle />} /> */}
-        {/* <Route path = '/novels' element = {<Novels />} /> */}
       </Routes>
       </div>
     </BrowserRouter>
