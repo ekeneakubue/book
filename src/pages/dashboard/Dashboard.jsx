@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Dashboard.module.css'
 import TopNavbar from '../../components/topNavbar/TopNavbar'
 import SideNavbar from '../../components/sideNavbar/SideNavbar'
-import Tab from '../../components/category/novels/Tab'
+import Tab from '../../components/category/Tab'
 import { IoBookOutline } from "react-icons/io5";
 import { PiBookBookmarkDuotone } from "react-icons/pi";
 
@@ -14,7 +14,7 @@ export default function Dashboard() {
         <div className={styles.topp}>
           <TopNavbar />
         </div>        
-        <div className={styles.dashboard}>
+        <div className={styles.dashboard}>          
           <div className={styles.dashboard_container}>
             <div className={styles.dash_hero_section}>
               <div className={styles.left}>
