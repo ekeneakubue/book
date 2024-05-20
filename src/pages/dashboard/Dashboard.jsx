@@ -4,6 +4,7 @@ import TopNavbar from '../../components/topNavbar/TopNavbar'
 import SideNavbar from '../../components/sideNavbar/SideNavbar'
 import Tab from '../../components/category/novels/Tab'
 import { IoBookOutline } from "react-icons/io5";
+import { PiBookBookmarkDuotone } from "react-icons/pi";
 
 export default function Dashboard() {
   return (
@@ -28,11 +29,15 @@ export default function Dashboard() {
           <div className={styles.bookshelf_container}>
               <div className={styles.shelf_menu}>
                 <div className={styles.book_stat}>
-                  <IoBookOutline />
+                  <PiBookBookmarkDuotone />                  
                   Books Read
                   <h1>0</h1>
                 </div> 
-                <div className={styles.book_stat}>Books Saved</div>               
+                <div className={styles.book_stat}>
+                  <IoBookOutline />
+                  Books Saved
+                  <h1>0</h1>
+                </div>               
               </div>
           </div>
         </div>
