@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
-import { popular, novels, science } from './CategoryData'
+import { popular, novels, science, wiki, lifestyle,tech, fashion } from './CategoryData'
+import { FiDownload } from "react-icons/fi";
+import { MdOutlineBookmarkBorder } from "react-icons/md";
 
 const Tab = () => {
   const [toggleState, setToggleState] = useState(1);
@@ -68,13 +70,20 @@ const Tab = () => {
       
       <div className={styles.content_container}>
         <div className={`${styles.content} ${getActiveClass(1, `${styles.active_content}`)}`}>
-          <div className={styles.category_card}>
+          <div className={styles.category_card}>            
             {
                 popular.map((item) =>                            
                 <div className={styles.cat_body}>
                     <img src={item.image} alt="" />
                     <h3>{item.title}</h3>
                     <p>{item.author}</p>
+                    <div className={styles.save_download}>
+                      <div className={styles.save_btn}>
+                        <MdOutlineBookmarkBorder className={styles.s_icon}/> 
+                        Save
+                      </div>
+                      <FiDownload className={styles.d_icon}/>
+                    </div>
                 </div>                               
                 )
             }      
@@ -89,6 +98,13 @@ const Tab = () => {
                     <img src={item.image} alt="" />
                     <h3>{item.title}</h3>
                     <p>{item.author}</p>
+                    <div className={styles.save_download}>
+                      <div className={styles.save_btn}>
+                        <MdOutlineBookmarkBorder className={styles.s_icon}/> 
+                        Save
+                      </div>
+                      <FiDownload className={styles.d_icon}/>
+                    </div>
                 </div>                               
                 )
             }      
@@ -103,11 +119,103 @@ const Tab = () => {
                   <img src={item.image} alt="" />
                   <h3>{item.title}</h3>
                   <p>{item.author}</p>
+                  <div className={styles.save_download}>
+                      <div className={styles.save_btn}>
+                        <MdOutlineBookmarkBorder className={styles.s_icon}/> 
+                        Save
+                      </div>
+                      <FiDownload className={styles.d_icon}/>
+                    </div>
               </div>                               
               )
             }      
           </div>
         </div>
+
+        <div className={`${styles.content} ${getActiveClass(4, `${styles.active_content}`)}`}>
+          <div className={styles.category_card}>
+            {
+              wiki.map((item) =>                            
+              <div className={styles.cat_body}>
+                  <img src={item.image} alt="" />
+                  <h3>{item.title}</h3>
+                  <p>{item.author}</p>
+                  <div className={styles.save_download}>
+                      <div className={styles.save_btn}>
+                        <MdOutlineBookmarkBorder className={styles.s_icon}/> 
+                        Save
+                      </div>
+                      <FiDownload className={styles.d_icon}/>
+                    </div>
+              </div>                               
+              )
+            }      
+          </div>
+        </div>
+        
+        <div className={`${styles.content} ${getActiveClass(5, `${styles.active_content}`)}`}>
+          <div className={styles.category_card}>
+            {
+              lifestyle.map((item) =>                            
+              <div className={styles.cat_body}>
+                  <img src={item.image} alt="" />
+                  <h3>{item.title}</h3>
+                  <p>{item.author}</p>
+                  <div className={styles.save_download}>
+                      <div className={styles.save_btn}>
+                        <MdOutlineBookmarkBorder className={styles.s_icon}/> 
+                        Save
+                      </div>
+                      <FiDownload className={styles.d_icon}/>
+                    </div>
+              </div>                               
+              )
+            }      
+          </div>
+        </div>
+
+        <div className={`${styles.content} ${getActiveClass(6, `${styles.active_content}`)}`}>
+          <div className={styles.category_card}>
+            {
+              tech.map((item) =>                            
+                <div className={styles.cat_body}>
+                  <img src={item.image} alt="" />
+                  <h3>{item.title}</h3>
+                  <p>{item.author}</p>
+                  <div className={styles.save_download}>
+                    <div className={styles.save_btn}>
+                      <MdOutlineBookmarkBorder className={styles.s_icon}/> 
+                      Save
+                    </div>
+                    <FiDownload className={styles.d_icon}/>
+                  </div>
+                </div>                               
+              )
+            }      
+          </div>
+        </div>
+
+        <div className={`${styles.content} ${getActiveClass(7, `${styles.active_content}`)}`}>
+          <div className={styles.category_card}>
+            {
+              fashion.map((item) =>                            
+                <div className={styles.cat_body}>
+                  <img src={item.image} alt="" />
+                  <h3>{item.title}</h3>
+                  <p>{item.author}</p>
+                  <div className={styles.save_download}>
+                    <div className={styles.save_btn}>
+                      <MdOutlineBookmarkBorder className={styles.s_icon}/> 
+                      Save
+                    </div>
+                    <FiDownload className={styles.d_icon}/>
+                  </div>
+                </div>                               
+              )
+            }      
+          </div>
+        </div>
+
       </div>
     </div>
   );
