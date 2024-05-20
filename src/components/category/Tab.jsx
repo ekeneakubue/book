@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
-import { popular, novels, science } from '../CategoryData'
+import { popular, novels, science } from './CategoryData'
 
 const Tab = () => {
   const [toggleState, setToggleState] = useState(1);
@@ -14,6 +14,7 @@ const Tab = () => {
 
   return (
     <div className={styles.container}>
+      <h2>Category</h2>
       <div className={styles.tab_list}>
         <div 
           className={`${styles.tabs} ${getActiveClass(1, `${styles.active_tabs}`)}`}
