@@ -9,6 +9,7 @@
     --btn-hover-yellow: #FFC25E;
     --icon-hover-color: #8C5F16;
     --about-bg-color: #213336;
+    --studyPotential-bg: #653F00;
 }
 
 html{
@@ -187,6 +188,11 @@ section p{
     min-height: 100vh;
     position: relative;
 }
+.study_potentials .left{
+    display: none;
+    width: 100%;
+}
+
 .study_potentials_text{
     width: 40%;
     height: 40vh;
@@ -213,9 +219,87 @@ ul li{
     background-color: var(--icon-hover-color);
     color: var(--textColor);
 }
-
-
 .aboutus{
     padding: 8rem 4rem 4rem;
     background-color: var(--about-bg-color);
 }
+
+
+/* START MEDIA QUERRY */
+@media only screen and (max-width:667px){
+    header{
+        padding: 1rem;
+        width: 100%;
+    }
+    header .homeNavbar_r .navs{
+        display: none;
+    }    
+    .homeNavbar_l .home_brand{
+        gap: 0.5rem;
+        font-size: 18px;
+    }
+    header .homeNavbar_r{
+        width: 50%;        
+    }
+    .homeNavbar_r .buttons{
+        width: 100%;
+    }
+
+    .hero_section{
+        width: 100%;
+        padding: 7rem 1rem 1.5rem;
+        flex-direction: column;
+    }   
+    .hero_left .title{  
+        width: 100%;  
+        font-size: 35px;
+    }
+    .hero_left p{
+        color: var(--sideNavsColor);
+    }
+    .getStarted_btn{
+        padding: 0.6rem 0rem;
+        width: 40%;        
+    }
+    .hero_right img{
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .free_access{ 
+        grid-template-columns: 1fr; 
+    }
+    section{
+        padding: 2rem 1rem;
+    }    
+    .access_freeBooks > p{
+        font-size: 20px;
+    }
+    .study_potentials{
+        background-image: none;
+        background-color: var(--studyPotential-bg);
+        min-height: 100vh;
+    }
+    .study_potentials .left{
+        display: block;
+        width: 100%;
+    }
+    .study_potentials .left img{
+        width: 100%;
+    }
+    .study_potentials_text{
+        width: 100%;
+        padding: 1rem 2rem;
+        position: absolute;
+        right: 0rem;
+        bottom: 3rem;
+        top: 20rem;
+        
+    }  
+    .aboutus{
+        padding: 4rem 1rem 0rem;
+        background-color: var(--about-bg-color);
+    }  
+}
+
+/* END MEDIA QUERRY */

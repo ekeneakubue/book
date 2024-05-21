@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { AccessFreeBooks } from './Data';
 import styles from './Home.module.css'
 import Footer from '../../components/footer/Footer';
-// import FeedBack from '../../components/feedBack/FeedBack';
 import WhyBookworm from '../../components/whyBookworm/WhyBookworm';
 import AbouotUs from '../../components/aboutus/AbouotUs';
 
@@ -49,9 +48,10 @@ export default function Home() {
                 <img src="images/home-hero-img.png" alt="" />
             </div>
         </div>
+
         <section id='features'>
             <div className={styles.access_freeBooks} >
-                <p>Access free Ebooks, Organize Study Materials, and <br /> Master your Subjects with AI-Powered Tools</p>
+                <p>Access free Ebooks, Organize Study Materials, and Master your Subjects with AI-Powered Tools</p>
                 <div className={styles.free_access}>
                     {
                         AccessFreeBooks.map((item) =>                            
@@ -65,8 +65,9 @@ export default function Home() {
                 </div>
             </div>
         </section>
-        
+
         <div className={styles.study_potentials} id=''>
+            <div className={styles.left}><img src="images/potential.png" alt="" /></div>
             <div className={styles.study_potentials_text}>
                 <h1>Unlock your <br/>full study potential</h1>
                 <ul>
@@ -79,14 +80,19 @@ export default function Home() {
                 <button>Get Started</button>
             </div>
         </div>
-        {/* <FeedBack /> */}
         <div className={styles.aboutus} id='about'>
             <AbouotUs />
-        </div>            
+        </div>   
+
+        {/* 
+        
+        
+
+                 
         <WhyBookworm />
         <div id="contacts">
             <Footer />           
-        </div>        
+        </div>         */}
     </div>
   )
 }
