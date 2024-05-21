@@ -139,10 +139,11 @@ export default function Login() {
                 </div> 
                 <div className={styles.pwd_details}>
                     <div className={styles.left_detail}>Remember me</div>
-                    <div className={styles.right_detail}>Forgot password</div>    
+                    <div className={styles.right_detail}>
+                        <Link to = '/forgotpassword'>Forgot password</Link>    
+                    </div>    
                 </div>  
                 <button className={styles.login_button} onClick={handleOnClick}>Login</button>
-                {/* <div className={styles.login_button}>Login</div>   */}
                 <div className={styles.dont_have_account}>
                     <span>Don't have an account? </span>
                     <span>
