@@ -8,3 +8,23 @@
     --btn-hover-yellow: #FFC25E;
     --icon-hover-color: #8C5F16;
 }
+
+.bookshelf{
+    padding: 2rem 1rem;
+}
+.bookshelf_menu{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.menu_card{
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background-color: var(--sideBarBackgroundColor);
+}
+.menu_detail{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
