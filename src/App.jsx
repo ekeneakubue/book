@@ -9,6 +9,10 @@ import Settings from './pages/settings/Settings';
 import Home from './pages/home/Home';
 import Signup from './pages/signup/Signup';
 import Login from './pages/login/Login';
+import ForgotPassword from './pages/resetPassword/forgotPassword/ForgotPassword';
+import PasswordReset from './pages/resetPassword/passwordReset/PasswordReset';
+import NewPassword from './pages/resetPassword/newPassword/NewPassword';
+import PasswordDone from './pages/resetPassword/passwordDone/PasswordDone';
 
 function App() {
   return (
@@ -24,6 +28,12 @@ function App() {
         <Route path = '/settings' element = {<Settings />} />
         <Route path = '/signup' element = {<Signup />} />
         <Route path = '/login' element = {<Login />} />
+
+        <Route path = '/forgotpassword' element = {<ForgotPassword />} />
+        <Route path = '/passwordreset' element = {<PasswordReset />} />
+        <Route path = '/newpassword' element = {<NewPassword />} />
+        <Route path = '/passworddone' element = {<PasswordDone />} />
+
       </Routes>
       </div>
     </BrowserRouter>
