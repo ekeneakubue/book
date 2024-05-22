@@ -1,7 +1,7 @@
 
 
 import React, {useState} from 'react'
-import styles from './MyNotes.module.css'
+import styles from './Saved.module.css'
 import SideNavbar from '../../components/sideNavbar/SideNavbar'
 import TopNavbar from '../../components/topNavbar/TopNavbar'
 import { IoArrowBackCircleOutline } from "react-icons/io5";
@@ -25,7 +25,7 @@ export default function MyNotes() {
         <button className={styles.back}><IoArrowBackCircleOutline className={styles.back_btn} /> Back</button>
         <div className={styles.flex}>
           <div className={styles.left}>
-        <h1>My Notes</h1>
+        <h1>Saved</h1>
         </div>
 
         <div className={styles.right}>
@@ -51,16 +51,14 @@ export default function MyNotes() {
             <p className={styles.category}>{select}</p>
           </div>
 
-          <div className={styles.right2}>
-            <button className={styles.add}>Add <CiSquarePlus className={styles.add_btn} /></button>
-          </div>
+         
      
         </div>
 
         <div className={styles.note}>
         
-          <p className={styles.default_note}>You have not added any note</p> 
-          <p className={styles.default_note2}> Your notes will appear here</p>
+          <p className={styles.default_note}>You have no book saved</p> 
+          <p className={styles.default_note2}> Your saved books will appear here.</p>
 
         </div>
       
