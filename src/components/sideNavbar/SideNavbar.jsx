@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './SideNavbar.module.css';
 import { RxDashboard } from "react-icons/rx";
 import { FiCompass } from "react-icons/fi";
@@ -10,6 +10,16 @@ import { TbLogout2 } from "react-icons/tb";
 import { Link } from 'react-router-dom';
 
 export default function SideNavbar() {
+
+    const [toggleState, setToggleState] = useState(1);
+
+    const toggleTab = (index) => {
+        setToggleState(index);
+    };
+
+    const getActiveClass = (index, className) =>
+        toggleState === index ? className : "";
+
   return (
     <div className={styles.sideNavbar}>
         <div className={styles.top_nav}>
@@ -29,10 +39,7 @@ export default function SideNavbar() {
                     </Link>
                     <Link to = '/bookshelf'>
                         <li className={styles.side_nav_link}><LuBookMinus className={styles.icon}/> My Bookshelf</li>
-                    </Link>
-                    <Link to = '/about'>
-                        <li className={styles.side_nav_link}><BsBookmarksFill className={styles.icon}/> About</li>
-                    </Link>
+                    </Link>                    
                     <Link to = '/settings'>
                         <li className={styles.side_nav_link}><RiSettingsLine className={styles.icon}/> Settings</li>
                     </Link>

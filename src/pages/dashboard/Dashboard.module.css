@@ -9,8 +9,20 @@
     --icon-hover-color: #8C5F16;
     --hero-bg-color: #27373A;
 }
+.topp{
+    position: fixed;
+    top: 0px;
+    width: 75%;
+    background-color: var(--BackgroundColor);
+}
+.dashboard{
+    display: flex;  
+    gap: 1rem;  
+    margin-top: 4rem;
+}
 .dashboard_container{
     width: 73%;
+    overflow-y: scroll;
     margin: 1rem 0rem 1rem 1rem;  
 }
 .dash_hero_section{  
@@ -37,3 +49,72 @@
     background-color: var(--btn-hover-yellow);
 }
 
+.bookshelf_container{   
+    width: 27%;   
+    position: fixed;
+    right: 1.5rem;
+    bottom: 0px;
+    top: 7rem;
+    left: 73.5rem;
+}
+.shelf_menu{
+    display: flex;
+    width: 84%;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem ;
+    
+}
+.shelf_menu .book_stat{
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    justify-content: center;
+    width: 150%;
+    height: 100px;
+    display: flex;
+    border-radius: 10px;
+    background-color: var(--hero-bg-color);
+}
+.bookshelf_container .table{
+    width: 83.5%;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: 7px solid var(--sideBarIcons);
+}
+.bookshelf_container .table .first_row{
+    width: 100%;
+    min-height: 4vh;
+    background-color: var(--BackgroundColor);
+}
+.bookshelf_container .table .second_row{
+    width: 100%;
+    min-height: 8rem;
+    border: 1px solid var(--sideBarIcons) ;
+    display: flex;
+}
+.second_row .rack{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--sideBarIcons);
+    width: 10%;
+    height: 20vh;
+}
+.rack span{
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    font-size: 12px;
+    background-color: var(--sideBarBackgroundColor);
+    min-width: 8.5vw;
+    font-weight: 600;
+    padding: 0.2rem;
+}
+.bookshelf_container .table .third_row{
+    width: 100%;
+    min-height: 2rem;
+    border: 5px solid var(--sideBarIcons);
+    background-color: var(--sideBarIcons);
+}

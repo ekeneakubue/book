@@ -9,12 +9,13 @@ import Saved from './pages/saved/Saved';
 import Shared from './pages/shared/Shared';
 import SearchResult from './pages/searchResult/SearchResult';
 import Settings from './pages/settings/Settings';
-import About from './pages/about/About';
 import Home from './pages/home/Home';
 import Signup from './pages/signup/Signup';
 import Login from './pages/login/Login';
-// import Lifestyle from './components/category/lifestyle/Lifestyle';
-// import Novels from './components/category/Novels';
+import ForgotPassword from './pages/resetPassword/forgotPassword/ForgotPassword';
+import PasswordReset from './pages/resetPassword/passwordReset/PasswordReset';
+import NewPassword from './pages/resetPassword/newPassword/NewPassword';
+import PasswordDone from './pages/resetPassword/passwordDone/PasswordDone';
 
 function App() {
   return (
@@ -26,7 +27,6 @@ function App() {
         <Route path = '/readout' element = {<ReadOut />} />         
         <Route path = '/bookshelf' element = {<BookShelf />} />
         <Route path = '/explore' element = {<Explore />} />
-        <Route path = '/about' element = {<About />} />
         <Route path = '/mynotes' element = {<MyNotes />} />
         <Route path = '/saved' element = {<Saved />} />
         <Route path = '/shared' element = {<Shared />} />
@@ -34,8 +34,12 @@ function App() {
         <Route path = '/settings' element = {<Settings />} />
         <Route path = '/signup' element = {<Signup />} />
         <Route path = '/login' element = {<Login />} />
-        {/* <Route path = '/lifestyle' element = {<Lifestyle />} /> */}
-        {/* <Route path = '/novels' element = {<Novels />} /> */}
+
+        <Route path = '/forgotpassword' element = {<ForgotPassword />} />
+        <Route path = '/passwordreset' element = {<PasswordReset />} />
+        <Route path = '/newpassword' element = {<NewPassword />} />
+        <Route path = '/passworddone' element = {<PasswordDone />} />
+
       </Routes>
       </div>
     </BrowserRouter>
