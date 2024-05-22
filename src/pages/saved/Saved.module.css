@@ -120,16 +120,7 @@
     padding: 10px 20px 10px 20px;
 }
 
-.add_btn{
-    color:var(--sideBarIcons);
-    width:24px;
-    height:24px;
-    margin-left: 5px;
-}
 
-.add:hover{
-    cursor: pointer;
-}
 
 .note{
     border:1px solid var(--sideBarIcons);
