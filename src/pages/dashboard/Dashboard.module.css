@@ -12,7 +12,9 @@
 .topp{
     position: fixed;
     top: 0px;
-    width: 75%;
+    left: 17rem;
+    right: 0.1rem;
+    width: 100%;
     background-color: var(--BackgroundColor);
 }
 .dashboard{
@@ -21,9 +23,9 @@
     margin-top: 4rem;
 }
 .dashboard_container{
-    width: 73%;
+    width: 75%;
     overflow-y: scroll;
-    margin: 1rem 0rem 1rem 1rem;  
+    margin: 0rem 0rem 1rem 1rem;  
 }
 .dash_hero_section{  
     display: flex;
@@ -35,38 +37,39 @@
     background-color: var(--hero-bg-color);
 }
 .dash_hero_section .left h2{
-    font-size: 50px;
+    font-size: 35px;
 }
 .dash_hero_section .left p{
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 1rem;
+    color: var(--sideNavsColor);
 }
 .dash_hero_section .left button{
     margin: 1.5rem 0rem 0rem 0rem;
     width: 30%;
     padding: 0.5rem;
     border-radius: 5px;
+    border: 1px solid var(--btn-hover-yellow);
     background-color: var(--btn-hover-yellow);
 }
-
+.dash_hero_section .left button:hover{
+    cursor: pointer;
+    color: var(--textColor);
+    background-color: var(--icon-hover-color);
+}
 .bookshelf_container{   
-    width: 27%;   
-    position: fixed;
-    right: 1.5rem;
-    bottom: 0px;
-    top: 7rem;
-    left: 73.5rem;
+    width: 25%;    
 }
 .shelf_menu{
     display: flex;
-    width: 84%;
+    width: 100%;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-bottom: 2rem ;
     
 }
 .shelf_menu .book_stat{
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
@@ -78,8 +81,8 @@
     background-color: var(--hero-bg-color);
 }
 .bookshelf_container .table{
-    width: 83.5%;
-    margin-top: 1rem;
+    width: 100%;
+    margin-top: 2rem;
     border-radius: 5px;
     border: 7px solid var(--sideBarIcons);
 }

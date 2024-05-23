@@ -82,17 +82,13 @@ export default function Home() {
         </div>
         <div className={styles.aboutus} id='about'>
             <AbouotUs />
-        </div>   
+        </div>  
 
-        {/* 
-        
-        
-
-                 
         <WhyBookworm />
         <div id="contacts">
             <Footer />           
-        </div>         */}
+        </div> 
+        
     </div>
   )
 }
