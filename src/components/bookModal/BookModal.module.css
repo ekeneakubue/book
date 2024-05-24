@@ -1,0 +1,36 @@
+:root{
+    --BackgroundColor: #192E32;
+    --BooksStat: #192426;
+    --HeroBgColor: #27373A;
+    --textColor: #e9e6e6;
+    --sideNavsColor: #A0C6D0;
+    --sideBarBackgroundColor: #243F46;
+    --sideBarIcons: #54838F;
+    --btn-hover-yellow: #FFC25E;
+    --icon-hover-color: #8C5F16;
+    --about-bg-color: #213336;
+}
+
+.modal_background{
+    background-color: rgb(25, 46, 50, 0.9);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
+    left: 0rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal_container{
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+    color: #192426;
+}

@@ -5,18 +5,16 @@ import SideNavbar from '../../components/sideNavbar/SideNavbar'
 import Tab from '../../components/category/Tab'
 import { IoBookOutline } from "react-icons/io5";
 import { PiBookBookmarkDuotone } from "react-icons/pi";
-import BookModal from '../../components/bookModal/BookModal'
 
-export default function Dashboard() {
+export default function Dashboard() {  
   return (
     <>
       <SideNavbar/>
       <main>
         <div className={styles.topp}>
           <TopNavbar />
-        </div>        
+        </div>             
         <div className={styles.dashboard}> 
-          <BookModal/>  
           <div className={styles.dashboard_container}>
             <div className={styles.dash_hero_section}>
               <div className={styles.left}>
