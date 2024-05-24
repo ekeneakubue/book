@@ -7,6 +7,7 @@ import TopNavbar from '../../components/topNavbar/TopNavbar'
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { CiSquarePlus } from "react-icons/ci";
 import { TiArrowSortedDown } from "react-icons/ti";
+import { Link } from 'react-router-dom';
 
 export default function MyNotes() {
 
@@ -22,7 +23,9 @@ export default function MyNotes() {
       
       <main>
       <TopNavbar />
-        <button className={styles.back}><IoArrowBackCircleOutline className={styles.back_btn} /> Back</button>
+        <Link to = '/dashboard'>
+          <button className={styles.back}><IoArrowBackCircleOutline className={styles.back_btn} /> Back</button>
+        </Link>
         <div className={styles.flex}>
           <div className={styles.left}>
         <h1>My Notes</h1>
