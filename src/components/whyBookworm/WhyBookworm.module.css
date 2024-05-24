@@ -1,0 +1,78 @@
+:root{
+    --BackgroundColor: #192E32;
+    --BooksStat: #192426;
+    --HeroBgColor: #27373A;
+    --textColor: #e9e6e6;
+    --offTextColor: #b8b6b6;
+    --sideNavsColor: #A0C6D0;
+    --sideBarBackgroundColor: #243F46;
+    --sideBarIcons: #54838F;
+    --btn-hover-yellow: #FFC25E;
+    --icon-hover-color: #8C5F16;
+    --pureBlack: #000;
+}
+
+.whybookworm{
+    display: flex;
+    padding: 4rem;
+    gap: 3rem;
+    justify-content: space-between;
+}
+.whybookworm .left{
+    width: 50%;
+    padding: 2rem;
+    line-height: 2rem;
+    color: var(--sideNavsColor);
+}
+.whybookworm .left .title{
+    color: var(--textColor);
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+.whybookworm .right{
+    width: 50%;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: var(--pureBlack);
+    color: var(--textColor);
+}
+.whybookworm .right .title{
+    color: var(--textColor);
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+.whybookworm .right p{
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    color: var(--offTextColor);
+}
+.whybookworm .right button{
+    width: 30%;
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: var(--btn-hover-yellow);
+}
+.whybookworm .right button:hover{
+    background-color: var(--icon-hover-color);
+    border: 1px solid var(--btn-hover-yellow);
+}
+
+
+@media only screen and (max-width:667px){
+    .whybookworm{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .whybookworm .left{
+        width: 100%;
+        padding: 1rem;
+        line-height: 2rem;
+    }
+    .whybookworm .right{
+        width: 100%;
+    }
+    .whybookworm .right button{
+        padding: 0.4rem;
+    }
+}

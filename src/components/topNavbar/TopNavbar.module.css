@@ -1,0 +1,76 @@
+:root{
+    --BackgroundColor: #192E32;
+    --BooksStat: #192426;
+    --Search-box-bg: #27373A;
+    --textColor: #e9e6e6;
+    --sideNavsColor: #A0C6D0;
+    --sideBarBackgroundColor: #243F46;
+    --sideBarIcons: #54838F;
+    --btn-hover-yellow: #FFC25E;
+    --icon-hover-color: #8C5F16;
+    --hero-bg-color: #27373A;
+}
+
+.top_navbar{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
+}
+.top_navbar .left_bar{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 70%;
+}
+.top_navbar .left_bar button{
+    width: 15%;
+    background-color: transparent;
+    border: 1px solid var(--textColor);
+    color: var(--textColor);
+    border-radius: 10px;
+}
+.top_navbar .left_bar form{
+    width: 85%;
+}
+.search_box{
+    background-color: var(--Search-box-bg);
+    width: 100%;
+    padding: 0.1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.search_box input{
+    background-color: transparent;
+    border: 0px solid;
+    height: 18px;
+    width: 160px;
+    width: 100%;  
+    color: var(--textColor);  
+    padding: 1rem;
+}
+.search_box.icon{
+    font-size: 30px;
+    cursor: pointer;
+}
+input:focus{
+    outline: none;
+}
+::placeholder{
+    font-size: 14px;
+    color: var(--sideNavsColor);
+}
+
+
+.top_navbar .right_bar{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 2rem;
+    gap: 1rem;
+    font-size: 20px;
+    width: 30%;
+}

@@ -1,0 +1,130 @@
+:root{
+  --BackgroundColor: #192E32;
+  --BooksStat: #192426;
+  --HeroBgColor: #27373A;
+  --textColor: #e9e6e6;
+  --sideNavsColor: #A0C6D0;
+  --sideBarBackgroundColor: #243F46;
+  --sideBarIcons: #54838F;
+  --btn-hover-yellow: #FFC25E;
+  --icon-hover-color: #8C5F16;
+  --about-bg-color: #213336;
+}
+
+
+.container {
+    width: 100%;
+    margin-top: 3rem;
+  }
+   
+  .tab_list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0rem 0rem;
+    gap: 2rem;      
+    margin-top: 1.5rem;  
+  } 
+  .tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0.5rem;
+    cursor: pointer; 
+  }
+  .active_tabs {
+    padding: 0.5rem;
+    background: var(--btn-hover-yellow);
+    color: var(--BooksStat);
+  }
+    
+  .content {
+      display: none;
+      margin-top: 2rem;
+      padding: 10px;
+      min-height: 30vh;
+  }
+  
+  .active_content {
+      display: flex;
+  }
+
+
+
+  /* card style */
+.category_card{   
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.cat_body{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    width: 90%;
+    margin: 1rem auto; 
+}
+.card_top{
+  display: flex;
+}
+
+.cat_body:hover .save_download{
+  display: block;
+  /* position: absolute; */
+  width: 50px;
+  height: 30px;
+  /* top: 20rem; */
+  z-index: 1;
+  background-color: red;
+}
+.cat_body p{
+    font-size: 12px;
+    color: var(--sideNavsColor);
+}
+.cat_body img{
+    width: 100%; 
+}
+
+.image_container{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.image_container:hover .save_icon{
+  display: flex;
+}
+.image_container:hover .d_icon{
+  display: flex;
+}
+.image_container img{
+  width: 100%;
+}
+.save_icon{
+  position: absolute;
+  left: 1rem;
+  bottom: 1.5rem;
+  display: none;
+  align-items: center;
+  font-size: 10px;  
+  padding: 0.2rem 0.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(0,0,0,0.4);
+}
+.s_icon{
+  font-size: 18px;
+}
+
+.d_icon{
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1rem;
+  padding: 0.5rem;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none;
+  background-color: rgb(0,0,0,0.4);
+}

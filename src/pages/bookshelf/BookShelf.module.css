@@ -1,0 +1,30 @@
+:root{
+    --BackgroundColor: #192E32;
+    --BooksStat: #192426;
+    --textColor: #e9e6e6;
+    --sideNavsColor: #A0C6D0;
+    --sideBarBackgroundColor: #243F46;
+    --sideBarIcons: #54838F;
+    --btn-hover-yellow: #FFC25E;
+    --icon-hover-color: #8C5F16;
+}
+
+.bookshelf{
+    padding: 2rem 1rem;
+}
+.bookshelf_menu{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.menu_card{
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background-color: var(--sideBarBackgroundColor);
+}
+.menu_detail{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
