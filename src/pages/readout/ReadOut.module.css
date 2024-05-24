@@ -1,0 +1,84 @@
+
+
+:root{
+    --BackgroundColor: #192E32;
+    --BooksStat: #192426;
+    --textColor: #e9e6e6;
+    --sideNavsColor: #A0C6D0;
+    --sideBarBackgroundColor: #243F46;
+    --sideBarIcons: #54838F;
+    --btn-hover-yellow: #FFC25E;
+    --icon-hover-color: #8C5F16;
+    --btn-border:#FFF9EF;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* body{
+    background-color: var(--BackgroundColor);
+} */
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    margin-left: 50px;
+    
+}
+
+.title{
+    margin-left: 200px;
+}
+
+.title h1{
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.close{
+    margin-left: 200px;
+}
+
+.close_icon{
+    width:40px;
+    height: 40px;
+}
+
+.divider{
+    width:100%;
+}
+
+.sidenav{
+    background-color: var(--sideBarBackgroundColor);
+    width:20%;
+    height:100vh;
+}
+
+.sidenav_link{
+    list-style-type: none;
+    padding-top:30px;
+}
+
+.pages{
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 18px;
+    margin-left:50px;
+    background-color: var(--sideBarBackgroundColor);
+}

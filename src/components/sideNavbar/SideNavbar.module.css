@@ -16,7 +16,7 @@ a{
 }
 .sideNavbar{
     background-color: var(--sideBarBackgroundColor);
-    width: 18%;
+    width: 20%;
     height: 100vh;
     padding: 2.5rem 2rem;
     font-family: "Poppins", sans-serif;    
@@ -91,6 +91,7 @@ ul li{
     border-radius: 7px;
     background-color: var(--btn-hover-yellow);
     color: var(--Black);
+    cursor: pointer;
 }
 .down_navbar:hover .icon{
     font-size: 25px;
