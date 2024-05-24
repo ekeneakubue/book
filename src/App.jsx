@@ -7,6 +7,8 @@ import Explore from './pages/explore/Explore';
 import MyNotes from './pages/myNotes/MyNotes';
 import Saved from './pages/saved/Saved';
 import Shared from './pages/shared/Shared';
+import Download from './pages/download/Download';
+import Upload from './pages/upload/Upload';
 import SearchResult from './pages/searchResult/SearchResult';
 import Settings from './pages/settings/Settings';
 import Home from './pages/home/Home';
@@ -30,11 +32,12 @@ function App() {
         <Route path = '/mynotes' element = {<MyNotes />} />
         <Route path = '/saved' element = {<Saved />} />
         <Route path = '/shared' element = {<Shared />} />
+        <Route path = '/download' element = {<Download />} />
+        <Route path = '/upload' element = {<Upload />} />
         <Route path = '/searchresult' element = {<SearchResult />} />
         <Route path = '/settings' element = {<Settings />} />
         <Route path = '/signup' element = {<Signup />} />
         <Route path = '/login' element = {<Login />} />
-
         <Route path = '/forgotpassword' element = {<ForgotPassword />} />
         <Route path = '/passwordreset' element = {<PasswordReset />} />
         <Route path = '/newpassword' element = {<NewPassword />} />
