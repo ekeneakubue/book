@@ -3,8 +3,12 @@ import styles from "./styles.module.css";
 import { popular, novels, science, wiki, lifestyle,tech, fashion } from './CategoryData'
 import { FiDownload } from "react-icons/fi";
 import { MdOutlineBookmarkBorder } from "react-icons/md";
+import BookModal from "../bookModal/BookModal";
+
 
 const Tab = () => {
+  const [openModal, setOpenModal] = useState(false)
+
   const [toggleState, setToggleState] = useState(1);
 
   const toggleTab = (index) => {
@@ -15,7 +19,8 @@ const Tab = () => {
     toggleState === index ? className : "";
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container}>      
+      {openModal && <BookModal closeModal = {setOpenModal}/>}  
       <h2>Category</h2>
       <div className={styles.tab_list}>
         <div 
@@ -73,7 +78,12 @@ const Tab = () => {
           <div className={styles.category_card}>            
             {
                 popular.map((item) =>                            
-                <div className={styles.cat_body}>                  
+                <div 
+                  className={styles.cat_body} 
+                  onClick = {()=>{
+                    setOpenModal(true);
+                  }}
+                >                  
                   <div className={styles.image_container}>
                     <img src={item.image} alt="" />                    
                     <div className={styles.save_icon}>

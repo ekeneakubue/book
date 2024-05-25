@@ -6,15 +6,15 @@ import Tab from '../../components/category/Tab'
 import { IoBookOutline } from "react-icons/io5";
 import { PiBookBookmarkDuotone } from "react-icons/pi";
 
-export default function Dashboard() {
+export default function Dashboard() {  
   return (
     <>
       <SideNavbar/>
       <main>
         <div className={styles.topp}>
           <TopNavbar />
-        </div>        
-        <div className={styles.dashboard}>          
+        </div>             
+        <div className={styles.dashboard}> 
           <div className={styles.dashboard_container}>
             <div className={styles.dash_hero_section}>
               <div className={styles.left}>
