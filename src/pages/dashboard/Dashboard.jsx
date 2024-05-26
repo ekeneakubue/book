@@ -58,7 +58,7 @@ export default function Dashboard() {
       if (book.authors && book.authors.length > 0) {
         authors = book.authors[0].name;
       }
-      const response = await axios.post(`${base}/saveBookshelf`, {
+      const response = await axios.post(`${baseURL}/saveBookshelf`, {
         name: book.title,
         author: authors, 
         genre: book.genre[0], 
@@ -77,7 +77,7 @@ export default function Dashboard() {
   const handleGetBookshelf =async()=>{
     try {
       const token = cookies.token;
-      const response = await axios.get(`${base}/getBookshelfByUser`, {
+      const response = await axios.get(`${baseURL}/getBookshelfByUser`, {
         headers: {
           Authorization: `Bearer ${token}` 
         },

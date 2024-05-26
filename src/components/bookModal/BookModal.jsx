@@ -21,7 +21,7 @@ export default function BookModal({ closeModal, book }) {
 
     const fetchBookContent = async () => {
         try {
-            const response = await axios.post(`${base}/getText`,{
+            const response = await axios.post(`${baseURL}/getText`,{
                 url:formatLink,
             });
             const text=response.data.text
@@ -41,7 +41,7 @@ export default function BookModal({ closeModal, book }) {
     }, []);
     
     useEffect(() => {
-        const newSocket = io(base);
+        const newSocket = io(baseURL);
         setSocket(newSocket);
 
         newSocket.on('connect', () => {
