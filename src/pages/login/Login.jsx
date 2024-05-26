@@ -1,5 +1,6 @@
 import React ,{ useId, useState} from 'react'
 import styles from './Login.module.css';
+import {useCookies} from 'react-cookie';
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
@@ -8,12 +9,7 @@ const baseURL = 'https://bookworm-backend-1.onrender.com';
 
 export default function Login() {
     const navigate = useNavigate();
-    const redirectToDashboard = () => {
-        navigate("/dashboard");
-    };
-
-    const [successmessage, setSuccessmessage]= useState('')
-    const [errormessage, setErrormessage]= useState('')
+    const [cookies, setCookie, removeCookie] = useCookies(['token']);
     const [formData, setFormData] = useState(
 
         {
@@ -84,11 +80,13 @@ export default function Login() {
             });
 
             console.log('Sign Up Response:', response.data);
-            setSuccessmessage(response.data.message)
-            setErrormessage(response.data.message); 
-            // redirectToDashboard();
+            if(response.status == 200){
+                navigate("/dashboard");
+            }
+            const token = response.data.token
+            setCookie('token', token, { path: '/' });
         } catch (error) {
-            console.error('Sign Up Error:', error.response.data);
+            console.error('Sign Up Error:', error);
         }
     }
   return (
@@ -139,11 +137,10 @@ export default function Login() {
                 </div> 
                 <div className={styles.pwd_details}>
                     <div className={styles.left_detail}>Remember me</div>
-                    <div className={styles.right_detail}>
-                        <Link to = '/forgotpassword'>Forgot password</Link>    
-                    </div>    
+                    <div className={styles.right_detail}>Forgot password</div>    
                 </div>  
                 <button className={styles.login_button} onClick={handleOnClick}>Login</button>
+                {/* <div className={styles.login_button}>Login</div>   */}
                 <div className={styles.dont_have_account}>
                     <span>Don't have an account? </span>
                     <span>

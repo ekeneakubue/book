@@ -1,13 +1,78 @@
-import React,{ useState } from 'react'
-import styles from './BookModal.module.css'
-import { reviews } from './ReviewData'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import styles from './BookModal.module.css';
+import { reviews } from './ReviewData';
+import {io} from 'socket.io-client';
+const baseURL = 'https://bookworm-backend-1.onrender.com';
+const base= 'http://localhost:8000'
 
-export default function BookModal({closeModal}) {
-    
+export default function BookModal({ closeModal, book }) {
     const [toggleState, setToggleState] = useState(1);
+    const [textContent, setTextContent] = useState('');
+    const [message, setMessage] = useState('');
+    const [receivedMessage, setReceivedMessage] = useState('');
+    const formatLink = book.formats['text/html'];
+    const [socket, setSocket] = useState(null);
+    // const socket = io(base);
+
     const toggleTab = (index) => {
         setToggleState(index);
     };
+
+    const fetchBookContent = async () => {
+        try {
+            const response = await axios.post(`${base}/getText`,{
+                url:formatLink,
+            });
+            const text=response.data.text
+            let textContent = text;
+            // Limit to 30 lines
+            let lines = textContent.split('\n').filter(line => line.trim() !== '');
+            lines = lines.slice(0, 30).join('\n');
+            setTextContent(lines);
+            // console.log(textContent);
+        } catch (error) {
+            console.error('Error fetching book content:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchBookContent();
+    }, []);
+    
+    useEffect(() => {
+        const newSocket = io(base);
+        setSocket(newSocket);
+
+        newSocket.on('connect', () => {
+            console.log('Connected to server');
+        });
+
+        newSocket.on('chat message', (message) => {
+            // console.log(message);
+            setReceivedMessage(message);
+            // console.log(receivedMessage,'kkkk')
+        });
+
+        // Clean up the socket connection on component unmount
+        return () => {
+            newSocket.disconnect();
+        };
+    }, []);
+    
+    useEffect(() => {
+        if (receivedMessage) {
+            // console.log('Updated received message:', receivedMessage);
+        }
+    }, [receivedMessage]);
+
+    const sendMessage = () => {
+        if (message.trim() !== '') {
+            socket.emit('chat message', message);
+            setMessage('');
+        }
+    };
+    
     const getActiveClass = (index, className) =>
         toggleState === index ? className : "";
 
@@ -17,11 +82,11 @@ export default function BookModal({closeModal}) {
                 <button onClick={() => closeModal(false)}>X</button>
                 <div className={styles.modal_main}>
                     <div className={styles.modal_image}>
-                        <img src="images/cate1.png" alt="" />
+                        <img src={book.formats['image/jpeg']} alt="" />
                     </div>
                     <div className={styles.modal_detail}>
-                        <div className={styles.title}><h3>Atomic Habits</h3></div>
-                        <p>Anthony W. Knapp</p>
+                        <div className={styles.title}><h3>{book.title}</h3></div>
+                        <p>{book.authors && book.authors.length > 0 ? book.authors[0].name : ''}</p>
                         <button>Art</button>&nbsp;&nbsp;
                         <button>Literature</button>
                         <div className={styles.features}>
@@ -49,76 +114,74 @@ export default function BookModal({closeModal}) {
                         </div>
                     </div>
                 </div>
-                
+
                 <div className={styles.modal_footer}>
                     <div className={styles.tab_list}>
-                        <div 
+                        <div
                             className={`${styles.tabs} ${getActiveClass(1, `${styles.active_tabs}`)}`}
                             onClick={() => toggleTab(1)}
                         >
-                        Description
+                            Description
                         </div>
-                        
-                        <div 
+
+                        <div
                             className={`${styles.tabs} ${getActiveClass(2, `${styles.active_tabs}`)}`}
                             onClick={() => toggleTab(2)}
                         >
-                        Ask AI
+                            Ask AI
                         </div>
 
-                        <div 
+                        <div
                             className={`${styles.tabs} ${getActiveClass(3, `${styles.active_tabs}`)}`}
                             onClick={() => toggleTab(3)}
                         >
-                        Review
-                        </div>                    
-                    </div>      
-                    
+                            Review
+                        </div>
+                    </div>
+
                     <div className={styles.content_container}>
                         <div className={`${styles.content} ${getActiveClass(1, `${styles.active_content}`)}`}>
-                            <p>
-                                Purple Hibiscus" is a poignant exploration of the complexities of family 
-                                relationships, the clash between tradition and modernity, and the 
-                                resilience of the human spirit. Adichie's prose is rich and evocative, 
-                                painting a vivid picture of Nigeria while delving into universal themes 
-                                that resonate with readers around the world.
-                            </p>
+                            <p>{textContent}</p>
                         </div>
-
                         <div className={`${styles.content} ${getActiveClass(2, `${styles.active_content}`)}`}>
-                            Welcome {reviews.map((item) => <p>{item.name}</p>)}
-                            What do you want to know about this book?
-                        </div>
-
+                    <h2>Send Message</h2>
+                    <input
+                        type="text"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                    />
+                    <button onClick={sendMessage}>Send</button>
+                    <h2>Received Message</h2>
+                    <p>{receivedMessage}</p>
+                </div>
+            
                         <div className={`${styles.content} ${getActiveClass(3, `${styles.active_content}`)}`}>
                             <p>See all</p>
-                            <div> 
-                                {
-                                    reviews.map((item) =>                                     
-                                        <div className={styles.review_card}>
-                                            <div className={styles.review_header}>
-                                                <div className={styles.reviewer}>
-                                                    <img src={item.image} alt="" />
-                                                    <div>
-                                                        <div className={styles.name}>{item.name}</div>
-                                                        <img src="images/mo1.png" alt="" /> {item.rate}
-                                                    </div>
-                                                </div>
-                                                <div className={styles.time}>
-                                                    <p>{item.time} min ago</p>
+                            <div>
+                                {reviews.map((item) => (
+                                    <div className={styles.review_card} key={item.name}>
+                                        <div className={styles.review_header}>
+                                            <div className={styles.reviewer}>
+                                                <img src={item.image} alt="" />
+                                                <div>
+                                                    <div className={styles.name}>{item.name}</div>
+                                                    <img src="images/mo1.png" alt="" /> {item.rate}
                                                 </div>
                                             </div>
-                                            <div className={styles.review_body}>
-                                                <p>{item.description}</p>
+                                            <div className={styles.time}>
+                                                <p>{item.time} min ago</p>
                                             </div>
-                                        </div>                               
-                                    )
-                                }                             
+                                        </div>
+                                        <div className={styles.review_body}>
+                                            <p>{item.description}</p>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                    </div> 
-                </div>           
+                    </div>
+                </div>
             </div>
         </div>
-    )
+    );
 }

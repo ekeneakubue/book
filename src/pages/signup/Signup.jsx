@@ -78,10 +78,10 @@ export default function Signup() {
 
         setErrors(formValidation)
 
-        if (Object.keys(formValidation).length === 0) {
-            alert("Signed up successfully! click ok to login")  
-            redirectToLogin();          
-        }
+        // if (Object.keys(formValidation).length === 0) {
+        //     alert("Signed up successfully! click ok to login")  
+        //     redirectToLogin();          
+        // }
        
         // console.log("Form submitted:", formData);
         

@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 export default function SideNavbar() {
 
     const [toggleState, setToggleState] = useState(1);
+    
 
     const toggleTab = (index) => {
         setToggleState(index);
@@ -21,6 +22,7 @@ export default function SideNavbar() {
         toggleState === index ? className : "";
 
   return (
+   
     <div className={styles.sideNavbar}>
         <div className={styles.top_nav}>
             <Link to = '/'>
@@ -50,6 +52,7 @@ export default function SideNavbar() {
             <TbLogout2 className={styles.icon}/> Log out
         </div>        
     </div>
-  )
+  
+)
 }
  

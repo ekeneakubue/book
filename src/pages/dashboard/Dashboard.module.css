@@ -59,6 +59,7 @@
 }
 .bookshelf_container{   
     width: 25%;    
+    
 }
 .shelf_menu{
     display: flex;
@@ -82,7 +83,7 @@
 }
 .bookshelf_container .table{
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 20rem;
     border-radius: 5px;
     border: 7px solid var(--sideBarIcons);
 }
@@ -97,9 +98,11 @@
     border: 1px solid var(--sideBarIcons) ;
     display: flex;
 }
+
 .second_row .rack{
     background-color: black;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     border: 1px solid var(--sideBarIcons);
@@ -115,9 +118,13 @@
     font-weight: 600;
     padding: 0.2rem;
 }
+.title{
+    margin-top: 20rem;
+}
 .bookshelf_container .table .third_row{
     width: 100%;
     min-height: 2rem;
     border: 5px solid var(--sideBarIcons);
     background-color: var(--sideBarIcons);
 }
+
