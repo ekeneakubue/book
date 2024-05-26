@@ -19,7 +19,7 @@ const DroppableArea = ({ children, bookshelfId, onDrop }) => {
   const [{ isOver }, drop] = useDrop(() => ({
     accept: ItemType,
     drop: (item) => {
-      console.log(item); // Logging the dropped item
+     
       onDrop(item, bookshelfId); // Pass the dropped item and bookshelf ID to the parent component
       return { name: 'DroppableArea' };
     },
@@ -52,16 +52,15 @@ export default function Dashboard() {
 
   const handleSaveBook = async (book) => {
     try {
-      
       const token = cookies.token;
       let authors = ''; 
       if (book.authors && book.authors.length > 0) {
         authors = book.authors[0].name;
       }
-      const response = await axios.post(`${baseURL}/saveBookshelf`, {
+      const response = await axios.post(`${base}/saveBookshelf`, {
         name: book.title,
         author: authors, 
-        genre: book.genre[0], 
+        genre: book.genre[0] || 'Comedy', 
         image: book.image, 
       },{
         headers: {
