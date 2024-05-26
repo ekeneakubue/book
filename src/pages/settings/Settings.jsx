@@ -1,8 +1,33 @@
-import React from 'react'
+import React , {useEffect, useState}from 'react'
 import styles from './Settings.module.css'
-import SideNavbar from '../../components/sideNavbar/SideNavbar'
+import SideNavbar from '../../components/sideNavbar/SideNavbar';
+import axios from 'axios';
+const baseURL = 'https://bookworm-backend-1.onrender.com';
+const base= 'http://localhost:8000';
+import { useCookies } from 'react-cookie';
 
 export default function Settings() {
+  const [user, setUser]= useState('')
+  const [cookies] = useCookies(['token']);
+  
+  const userDetails=async()=>{
+  try{
+    const token = cookies.token;
+    const response = await axios.get(`${baseURL}/user`,{
+      headers: {
+        Authorization: `Bearer ${token}` 
+      },
+      withCredentials: true,
+    })
+    setUser(response.data.user)
+  }catch(error){
+    console.log(error)
+  }
+  }
+
+  useEffect(() => {
+   userDetails()
+  }, []);
   return (
     <>
       <SideNavbar />
@@ -16,8 +41,8 @@ export default function Settings() {
               <img src="images\settingsprofile.png" alt="" />
             </div>
             <div className={styles.profile_text}>
-             <h1>Lori Hasley</h1>
-             <p>lorihasley@gmail.com</p>
+             <h1>{user.name}</h1>
+             <p>{user.email}</p>
             </div>
           </div>
           <div className={styles.button_part}>

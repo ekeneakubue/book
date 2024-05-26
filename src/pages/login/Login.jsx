@@ -3,13 +3,15 @@ import styles from './Login.module.css';
 import {useCookies} from 'react-cookie';
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import useCustomHook  from '../custom/userDetails'
 
 const baseURL = 'https://bookworm-backend-1.onrender.com';
-
+const base= 'http://localhost:8000'
 
 export default function Login() {
     const navigate = useNavigate();
     const [cookies, setCookie, removeCookie] = useCookies(['token']);
+    const { setValue } = useCustomHook();
     const [formData, setFormData] = useState(
 
         {
@@ -79,12 +81,13 @@ export default function Login() {
                passWord:formData.password,
             });
 
-            console.log('Sign Up Response:', response.data);
             if(response.status == 200){
                 navigate("/dashboard");
             }
             const token = response.data.token
             setCookie('token', token, { path: '/' });
+            console.log(response.data.User)
+            setValue(response.data.User)
         } catch (error) {
             console.error('Sign Up Error:', error);
         }

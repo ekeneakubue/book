@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './ForgotPassword.module.css'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 export default function ForgotPassword() {
+const [email, setEmail]=useState('')
+
+const handleSubmit =  async(e) => {
+  e.preventDefault()
+  console.log(email)
+  const response= await axios.post
+}
+
+const handleOnChange= (e) => {
+  setEmail(e.target.value)
+}
+
   return (
     <div className={styles.reset_password}>
       <div className={styles.pass_left}>
@@ -14,13 +27,13 @@ export default function ForgotPassword() {
         <div className={styles.title}>Forgot password?</div>
         <p>No worries, we’ll send you reset information</p>
 
-        <form action="">
+        <form action=""  onSubmit={handleSubmit}>
           <div className={styles.form_field}>
-            <input type="email" placeholder='Enter your email' className={styles.pass_input} />
+            <input type="email" placeholder='Enter your email' className={styles.pass_input}  onChange={handleOnChange} value={email}/>
           </div>
-          <Link to = '/passwordreset'>
+          {/* <Link to = '/passwordreset'> */}
             <button>Reset Password</button>
-          </Link>
+          {/* </Link> */}
         </form>
 
         <div className={styles.pass_footer}>

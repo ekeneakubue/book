@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './BookModal.module.css';
+import { Link } from 'react-router-dom'
 import { reviews } from './ReviewData';
 import {io} from 'socket.io-client';
 const baseURL = 'https://bookworm-backend-1.onrender.com';
@@ -30,7 +31,6 @@ export default function BookModal({ closeModal, book }) {
             let lines = textContent.split('\n').filter(line => line.trim() !== '');
             lines = lines.slice(0, 30).join('\n');
             setTextContent(lines);
-            // console.log(textContent);
         } catch (error) {
             console.error('Error fetching book content:', error);
         }
@@ -108,7 +108,9 @@ export default function BookModal({ closeModal, book }) {
                             </div>
                         </div>
                         <div className={styles.features_btns}>
-                            <button><img src="images/mo5.png" alt="" /> Read Book</button>
+                            <Link to='/readout' state={{book}}>
+                            <button><img src="images/mo5.png" alt=""/> Read Book</button>
+                            </Link>
                             <button className={styles.listen}><img src="images/mo6.png" alt="" /> Listen</button>
                             <button>Save Offline</button>
                         </div>
